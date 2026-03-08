@@ -35,9 +35,9 @@ const PRIORITY_LABELS: Record<MissionPriority, string> = {
 };
 
 const COLUMN_CONFIG: { key: MissionStatus; label: string; icon: string; color: string }[] = [
-  { key: 'queued', label: 'Queued', icon: '⏳', color: '#64748b' },
-  { key: 'in_progress', label: 'In Progress', icon: '⚡', color: '#fbbf24' },
-  { key: 'completed', label: 'Completed', icon: '✅', color: '#4ade80' },
+  { key: 'queued', label: 'Queued', icon: String.fromCodePoint(0x23F3), color: '#64748b' },
+  { key: 'in_progress', label: 'In Progress', icon: String.fromCodePoint(0x26A1), color: '#fbbf24' },
+  { key: 'completed', label: 'Completed', icon: String.fromCodePoint(0x2705), color: '#4ade80' },
 ];
 
 function timeAgo(ts: number): string {
@@ -254,7 +254,7 @@ function MissionCard({ mission }: { mission: Mission }) {
           {PRIORITY_LABELS[mission.priority]}
         </span>
         {mission.status === 'completed' && (
-          <span className="mission-complete-check">✓</span>
+          <span className="mission-complete-check">{String.fromCodePoint(0x2713)}</span>
         )}
       </div>
       <h4 className="mission-card-title">{mission.title}</h4>
@@ -274,7 +274,7 @@ function MissionCard({ mission }: { mission: Mission }) {
 
       <div className="mission-card-footer">
         <div className="mission-agent-tag">
-          <span className="mission-agent-emoji">{agent?.emoji || '✨'}</span>
+          <span className="mission-agent-emoji">{agent?.emoji || String.fromCodePoint(0x2728)}</span>
           <span className="mission-agent-name">{agent?.name || 'Unknown'}</span>
         </div>
         <span className="mission-time">
@@ -384,14 +384,14 @@ export default function App() {
             className={`view-toggle-btn ${viewMode === 'swarm' ? 'active' : ''}`}
             onClick={() => setViewMode('swarm')}
           >
-            <span className="view-toggle-icon">*</span>
+            <span className="view-toggle-icon">&#x1F30C;</span>
             Swarm
           </button>
           <button
             className={`view-toggle-btn ${viewMode === 'missions' ? 'active' : ''}`}
             onClick={() => setViewMode('missions')}
           >
-            <span className="view-toggle-icon">*</span>
+            <span className="view-toggle-icon">&#x1F4CB;</span>
             Missions
             <span className="view-toggle-badge">{missionCounts.in_progress}</span>
           </button>
