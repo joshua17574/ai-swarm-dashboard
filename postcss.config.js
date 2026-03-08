@@ -1,6 +1,2 @@
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
+// This file is intentionally empty - postcss is not used in this project
+export default {};
