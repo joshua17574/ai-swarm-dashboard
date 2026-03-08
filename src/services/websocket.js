@@ -1,4 +1,4 @@
-// ── WebSocket Service (Client-Side Bridge) ─────────────────────
+// ── WebSocket Service (Client-Side Bridge) ───────────────────
 // Routes simulation events through the same interface the app expects
 import simulation from './simulation';
 
