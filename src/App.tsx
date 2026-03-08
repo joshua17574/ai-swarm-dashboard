@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { useSimulatedAgents } from './useSimulatedAgents';
+import { useRealAgents } from './useRealAgents';
 import { useMissions } from './useMissions';
 import { Agent, AgentStatus, Mission, MissionPriority, MissionStatus } from './types';
 import { AGENTS } from './agents';
@@ -329,7 +329,7 @@ function MissionBoard({ missions }: { missions: Mission[] }) {
 
 /* ========== Main App ========== */
 export default function App() {
-  const { agents, feed } = useSimulatedAgents();
+  const { agents, feed, syncedAt, isLive } = useRealAgents();
   const missions = useMissions();
   const [selectedId, setSelectedId] = useState<string>('nebula');
   const [viewMode, setViewMode] = useState<ViewMode>('swarm');
@@ -374,7 +374,14 @@ export default function App() {
           <div className="logo-mark">N</div>
           <div className="header-title">
             <h1>NEBULA SWARM</h1>
-            <span className="header-sub">{agents.length} agents online</span>
+            <span className="header-sub">
+              {agents.length} agents online
+              <span style={{ marginLeft: 8, fontSize: '0.7rem', opacity: 0.7 }}>
+                {isLive
+                  ? `LIVE \u2022 synced ${syncedAt ? new Date(syncedAt).toLocaleTimeString() : ''}`
+                  : 'SIMULATED'}
+              </span>
+            </span>
           </div>
         </div>
 
