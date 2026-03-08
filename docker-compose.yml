@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  swarm-dashboard:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - JWT_SECRET=change-this-in-production
+      - NODE_ENV=production
+    volumes:
+      - swarm-data:/app/data
+    restart: unless-stopped
+volumes:
+  swarm-data:
