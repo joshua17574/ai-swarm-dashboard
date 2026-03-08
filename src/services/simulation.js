@@ -1,4 +1,4 @@
-// ── Local Simulation Engine ──────────────────────────────────
+// ── Local Simulation Engine ────────────────────────────────────
 // Replaces Express + SQLite + WebSocket with pure client-side logic
 // All state lives in memory + localStorage for persistence
 
@@ -68,7 +68,7 @@ class SimulationEngine {
     return () => this.listeners.get(event)?.delete(callback);
   }
 
-  // ── Auth ──────────────────────────────────────────────────
+  // ── Auth ────────────────────────────────────────────────
   register(username, email, password) {
     const user = { id: uuidv4(), username, email, created_at: new Date().toISOString() };
     this.state.user = user;
@@ -106,7 +106,7 @@ class SimulationEngine {
     return !!this.state.user;
   }
 
-  // ── Seed Data ─────────────────────────────────────────────
+  // ── Seed Data ───────────────────────────────────────────
   _seedStarterAgents() {
     const starters = [
       { name: 'Nova', role: 'executor' },
@@ -168,7 +168,7 @@ class SimulationEngine {
     }
   }
 
-  // ── Agents ────────────────────────────────────────────────
+  // ── Agents ──────────────────────────────────────────────
   getAgents() {
     return this.state.agents;
   }
@@ -231,7 +231,7 @@ class SimulationEngine {
     return this.state.logs.filter(l => l.agent_id === id).slice(-limit);
   }
 
-  // ── Tasks ─────────────────────────────────────────────────
+  // ── Tasks ───────────────────────────────────────────────
   getTasks() {
     return this.state.tasks;
   }
@@ -305,7 +305,7 @@ class SimulationEngine {
     return { success: true };
   }
 
-  // ── Stats ─────────────────────────────────────────────────
+  // ── Stats ───────────────────────────────────────────────
   getStats() {
     const agents = this.state.agents;
     const tasks = this.state.tasks;
