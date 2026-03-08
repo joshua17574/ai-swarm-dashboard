@@ -19,7 +19,7 @@ export default function Dashboard() {
 
       {/* UI Overlay */}
       <div className="ui-overlay">
-        {/* ── Top Bar ─────────────────────────────────────── */}
+        {/* ── Top Bar ───────────────────────────────────────── */}
         <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 py-3 z-20"
           style={{ background: 'linear-gradient(180deg, rgba(3,7,18,0.9) 0%, rgba(3,7,18,0) 100%)' }}>
           {/* Left: Logo */}
@@ -67,7 +67,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* ── Bottom HUD ──────────────────────────────────── */}
+        {/* ── Bottom HUD ────────────────────────────────────── */}
         <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between px-6 py-4 z-20"
           style={{ background: 'linear-gradient(0deg, rgba(3,7,18,0.8) 0%, rgba(3,7,18,0) 100%)' }}>
           <div className="text-xs text-gray-600 tracking-wider" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
@@ -80,7 +80,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* ── Side Panels ─────────────────────────────────── */}
+        {/* ── Side Panels ───────────────────────────────────── */}
         {/* Agent Detail Panel (right side) */}
         {selectedAgent && (
           <div className="absolute top-16 right-4 bottom-16 w-80 z-30 overflow-hidden">
