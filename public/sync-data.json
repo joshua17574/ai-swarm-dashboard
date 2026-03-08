@@ -1,59 +1,59 @@
 {
-  "synced_at": "2026-03-09T05:27:00+08:00",
+  "synced_at": "2026-03-08T22:04:00Z",
   "agents": [
     {
       "slug": "youtube-shorts-creator",
       "name": "YouTube Shorts Creator",
-      "description": "An AI-powered agent that produces complete YouTube Shorts from pre-generated script and metadata JSON \u2014 runs the v3.0 factory script (TTS narration, cinematic animations, video composition) and uploads directly to YouTube with SEO-optimized metadata.",
+      "description": "An AI-powered agent that produces complete YouTube Shorts from pre-generated script and metadata JSON — runs the v3.0 factory script (TTS narration, cinematic animations, video composition) and uploads directly to YouTube with SEO-optimized metadata.",
       "tools": ["Code", "Web Search", "youtube_data_api"],
       "is_disabled": false
     },
     {
       "slug": "content-strategist-agent",
       "name": "Content Strategist Agent",
-      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Generates weekly content calendars, adapts topics into platform-specific briefs with consistent brand voice.",
+      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs.",
       "tools": ["Web Search", "Code", "Memory", "Agents", "twitter", "youtube_data_api", "facebook_pages"],
       "is_disabled": false
     },
     {
       "slug": "research-intelligence-agent",
       "name": "Research & Intelligence Agent",
-      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, crypto/airdrop vetting, and news monitoring.",
+      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, and news monitoring.",
       "tools": ["Web Search", "Web Scraping", "Web", "Code", "Memory"],
       "is_disabled": false
     },
     {
       "slug": "telegram-notifier",
       "name": "Telegram Notifier",
-      "description": "Real-time Telegram notification hub for Joshua (@joshua761) \u2014 sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.",
+      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.",
       "tools": ["Communication", "Core"],
       "is_disabled": false
     },
     {
       "slug": "x-twitter-engagement-agent",
       "name": "X Twitter Engagement Agent",
-      "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter. Runs automatically every 6 hours.",
+      "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter.",
       "tools": ["twitter"],
       "is_disabled": false
     },
     {
       "slug": "spotify-music-manager",
       "name": "Spotify Music Manager",
-      "description": "Manages your Spotify account end-to-end \u2014 searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
+      "description": "Manages your Spotify account end-to-end — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
       "tools": ["spotify"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-file-manager",
       "name": "Google Drive File Manager",
-      "description": "Manages files and folders on Google Drive for joshua.daquipil0817@gmail.com \u2014 handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
+      "description": "Manages files and folders on Google Drive — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-manager",
       "name": "Google Drive Manager",
-      "description": "Manages Google Drive via OAuth \u2014 handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
+      "description": "Manages Google Drive via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
@@ -67,7 +67,7 @@
     {
       "slug": "kwen-net-page-manager",
       "name": "Kwen Net Page Manager",
-      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity every 4 hours.",
+      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity.",
       "tools": ["facebook_pages"],
       "is_disabled": false
     },
@@ -114,10 +114,10 @@
       "is_disabled": false
     },
     {
-      "slug": "nebula",
-      "name": "Nebula",
-      "description": "Central AI orchestrator \u2014 routes tasks, coordinates agents, manages workflows and automations across the entire swarm.",
-      "tools": ["All"],
+      "slug": "useragent",
+      "name": "UserAgent",
+      "description": "Default user agent",
+      "tools": [],
       "is_disabled": false
     }
   ],
@@ -125,68 +125,68 @@
     {
       "slug": "dashboard-sync",
       "name": "Dashboard Sync",
-      "description": "Every hour, collects live agent, trigger, and task execution data from Nebula and pushes sync-data.json to the ai-swarm-dashboard GitHub repo.",
+      "description": "Every hour, collects live agent, trigger, and task execution data from Nebula and pushes sync-data.json to the ai-swarm-dashboard GitHub repo for the live dashboard.",
       "trigger_type": "cron",
       "cron_expression": "0 */1 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "36 minutes from now"
+      "next_run_at": "56 minutes from now"
     },
     {
       "slug": "youtube-short-2200-utc",
       "name": "YouTube Short 22:00 UTC",
-      "description": "Produces and uploads 1 YouTube Short at 10PM UTC daily",
+      "description": "Produces and uploads 1 YouTube Short at 10PM UTC daily — fully autonomous",
       "trigger_type": "cron",
       "cron_expression": "0 22 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "36 minutes from now"
+      "next_run_at": "a day from now"
     },
     {
       "slug": "youtube-short-1900-utc",
       "name": "YouTube Short 19:00 UTC",
-      "description": "Produces and uploads 1 YouTube Short at 7PM UTC daily",
+      "description": "Produces and uploads 1 YouTube Short at 7PM UTC daily — fully autonomous",
       "trigger_type": "cron",
       "cron_expression": "0 19 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "2 hours ago",
-      "next_run_at": "22 hours from now"
+      "last_run_at": "3 hours ago",
+      "next_run_at": "21 hours from now"
     },
     {
       "slug": "youtube-short-1700-utc",
       "name": "YouTube Short 17:00 UTC",
-      "description": "Produces and uploads 1 YouTube Short at 5PM UTC daily",
+      "description": "Produces and uploads 1 YouTube Short at 5PM UTC daily — fully autonomous",
       "trigger_type": "cron",
       "cron_expression": "0 17 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "4 hours ago",
-      "next_run_at": "20 hours from now"
+      "last_run_at": "5 hours ago",
+      "next_run_at": "19 hours from now"
     },
     {
       "slug": "youtube-short-1300-utc",
       "name": "YouTube Short 13:00 UTC",
-      "description": "Produces and uploads 1 YouTube Short at 1PM UTC daily",
+      "description": "Produces and uploads 1 YouTube Short at 1PM UTC daily — fully autonomous",
       "trigger_type": "cron",
       "cron_expression": "0 13 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "7 hours ago",
-      "next_run_at": "16 hours from now"
+      "last_run_at": "8 hours ago",
+      "next_run_at": "15 hours from now"
     },
     {
       "slug": "youtube-short-1000-utc",
       "name": "YouTube Short 10:00 UTC",
-      "description": "Produces and uploads 1 YouTube Short at 10AM UTC daily",
+      "description": "Produces and uploads 1 YouTube Short at 10AM UTC daily — fully autonomous",
       "trigger_type": "cron",
       "cron_expression": "0 10 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "13 hours from now"
+      "next_run_at": "12 hours from now"
     },
     {
       "slug": "youtube-shorts-creator-check",
@@ -196,8 +196,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "3 hours ago",
-      "next_run_at": "3 hours from now"
+      "last_run_at": "4 hours ago",
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "spotify-music-manager-check",
@@ -207,8 +207,8 @@
       "cron_expression": "0 */1 * * *",
       "is_active": false,
       "run_count": 10,
-      "last_run_at": "3 hours ago",
-      "next_run_at": "an hour ago"
+      "last_run_at": "4 hours ago",
+      "next_run_at": "2 hours ago"
     },
     {
       "slug": "hourly-airdrop-digest",
@@ -218,8 +218,8 @@
       "cron_expression": "0 8,20 * * *",
       "is_active": true,
       "run_count": 4,
-      "last_run_at": "an hour ago",
-      "next_run_at": "11 hours from now"
+      "last_run_at": "2 hours ago",
+      "next_run_at": "10 hours from now"
     },
     {
       "slug": "github-repo-manager-check",
@@ -230,7 +230,7 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "3 hours from now"
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "crypto-news-to-kwen-net",
@@ -241,7 +241,7 @@
       "is_active": true,
       "run_count": 4,
       "last_run_at": "3 hours ago",
-      "next_run_at": "3 hours from now"
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "kwen-net-page-manager-check",
@@ -251,8 +251,8 @@
       "cron_expression": "0 */4 * * *",
       "is_active": true,
       "run_count": 4,
-      "last_run_at": "an hour ago",
-      "next_run_at": "3 hours from now"
+      "last_run_at": "2 hours ago",
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "daily-news-digest",
@@ -263,7 +263,7 @@
       "is_active": true,
       "run_count": 4,
       "last_run_at": "3 hours ago",
-      "next_run_at": "3 hours from now"
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "x-twitter-engagement-agent-check",
@@ -274,17 +274,17 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "3 hours from now"
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "weekly-review",
       "name": "Weekly Review",
-      "description": "Weekly self-improvement review \u2014 analyzes what's working, what's not, and proposes changes",
+      "description": "Weekly self-improvement review — analyzes what's working, what's not, and proposes changes",
       "trigger_type": "cron",
       "cron_expression": "0 18 * * 0",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "3 hours ago",
+      "last_run_at": "4 hours ago",
       "next_run_at": "6 days from now"
     },
     {
@@ -296,50 +296,64 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "12 hours from now"
+      "next_run_at": "11 hours from now"
     }
   ],
   "recent_tasks": [
     {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #1",
+      "status": "in_progress",
+      "created_at": "6 seconds ago",
+      "updated_at": "6 seconds ago",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Debug and Repair SQLite Build Process",
+      "status": "paused",
+      "created_at": "28 minutes ago",
+      "updated_at": "5 minutes ago",
+      "description_preview": "Automate the diagnostic build, error remediation, and iterative verification process to ensure a successful build."
+    },
+    {
       "title": "Scraping and Saving Project Source Files",
       "status": "failed",
-      "created_at": "2 hours ago",
-      "updated_at": "8 minutes ago",
-      "description_preview": "Automated retrieval of repository structure and source code files from various project directories"
+      "created_at": "3 hours ago",
+      "updated_at": "7 minutes ago",
+      "description_preview": "Automated retrieval of repository structure and source code files from various project directories."
     },
     {
       "title": "Deploy Strategy Documentation and Verify Completion",
       "status": "completed",
-      "created_at": "55 minutes ago",
-      "updated_at": "28 minutes ago",
-      "description_preview": "Execute final deployment batches and perform a comprehensive inventory audit to ensure all 90 strategy docs deployed"
+      "created_at": "2 hours ago",
+      "updated_at": "an hour ago",
+      "description_preview": "Execute final deployment batches and perform a comprehensive inventory audit to ensure all 90 strategy docs are deployed."
     },
     {
       "title": "Kwen Net Page Manager Check - Execution #4",
       "status": "failed",
-      "created_at": "an hour ago",
-      "updated_at": "52 minutes ago",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
     },
     {
       "title": "Hourly Airdrop Digest - Execution #4",
       "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "an hour ago",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'Daily Airdrop Digest'"
     },
     {
       "title": "Execute Sequential Multi-Batch File Uploads",
       "status": "failed",
-      "created_at": "2 hours ago",
-      "updated_at": "an hour ago",
-      "description_preview": "Organizing and executing ten sequential batch uploads of specified project documentation files"
+      "created_at": "3 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "Organizing and executing ten sequential batch uploads of specified project documentation files."
     },
     {
       "title": "Daily YouTube Short Production v3.0 - Execution #1 (19:00 UTC)",
       "status": "completed",
-      "created_at": "2 hours ago",
-      "updated_at": "2 hours ago",
+      "created_at": "3 hours ago",
+      "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Short 19:00 UTC'"
     },
     {
@@ -352,93 +366,79 @@
     {
       "title": "Spotify Music Manager Check - Execution #10",
       "status": "failed",
-      "created_at": "3 hours ago",
+      "created_at": "4 hours ago",
       "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
     },
     {
       "title": "YouTube Shorts Creator Check - Execution #2",
       "status": "failed",
-      "created_at": "3 hours ago",
+      "created_at": "4 hours ago",
       "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
     },
     {
       "title": "Daily News Digest - Execution #4",
       "status": "completed",
-      "created_at": "3 hours ago",
+      "created_at": "4 hours ago",
       "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'Daily News Digest'"
     },
     {
       "title": "Weekly Review - Execution #1",
       "status": "completed",
-      "created_at": "3 hours ago",
-      "updated_at": "3 hours ago",
+      "created_at": "4 hours ago",
+      "updated_at": "4 hours ago",
       "description_preview": "Automated task from trigger 'Weekly Review'"
     },
     {
       "title": "Spotify Music Manager Check - Execution #9",
       "status": "failed",
-      "created_at": "4 hours ago",
+      "created_at": "5 hours ago",
       "updated_at": "4 hours ago",
       "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
     },
     {
       "title": "Daily YouTube Short Production v3.0 - Execution #1 (17:00 UTC)",
       "status": "completed",
-      "created_at": "4 hours ago",
-      "updated_at": "4 hours ago",
+      "created_at": "5 hours ago",
+      "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Short 17:00 UTC'"
     },
     {
       "title": "Automated Viral Short Video Production Workflow",
       "status": "failed",
-      "created_at": "7 hours ago",
+      "created_at": "8 hours ago",
       "updated_at": "5 hours ago",
-      "description_preview": "Automates the creation and publication of viral-style videos by researching trending topics"
+      "description_preview": "Automates the creation and publication of viral-style videos by researching trending topics."
     },
     {
       "title": "Kwen Net Page Manager Check - Execution #3",
       "status": "failed",
-      "created_at": "5 hours ago",
+      "created_at": "6 hours ago",
       "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
     },
     {
       "title": "Spotify Music Manager Check - Execution #8",
       "status": "failed",
-      "created_at": "5 hours ago",
+      "created_at": "6 hours ago",
       "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
     },
     {
       "title": "Migrate Agency Agents Repository to New Remote",
       "status": "failed",
-      "created_at": "6 hours ago",
-      "updated_at": "5 hours ago",
-      "description_preview": "The repository was cloned to the local environment, initialized with Git tracking, and pushed to new remote"
+      "created_at": "7 hours ago",
+      "updated_at": "6 hours ago",
+      "description_preview": "The repository was cloned to the local environment, initialized with Git tracking, and subsequently pushed to a new remote."
     },
     {
       "title": "Spotify Music Manager Check - Execution #7",
       "status": "failed",
-      "created_at": "6 hours ago",
-      "updated_at": "6 hours ago",
-      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
-    },
-    {
-      "title": "Consolidate Mission Control Repository Codebase Metadata",
-      "status": "failed",
       "created_at": "7 hours ago",
       "updated_at": "6 hours ago",
-      "description_preview": "The project codebase has been read, processed, and consolidated into a structured note file"
-    },
-    {
-      "title": "Daily YouTube Short Production v2.1 - Execution #1 (13:00 UTC)",
-      "status": "failed",
-      "created_at": "8 hours ago",
-      "updated_at": "6 hours ago",
-      "description_preview": "Automated task from trigger 'YouTube Short 13:00 UTC'"
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
     }
   ]
 }
