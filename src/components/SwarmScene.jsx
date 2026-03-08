@@ -4,7 +4,7 @@ import { OrbitControls, Text, Billboard, Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { useSwarm } from '../App';
 
-// ── Status Colors ────────────────────────────────────────────
+// ── Status Colors ───────────────────────────────────────────
 const STATUS_COLORS = {
   active: '#10b981',
   working: '#00f0ff',
@@ -135,7 +135,7 @@ function AgentNode({ agent, onClick, isSelected }) {
   );
 }
 
-// ── Task Hologram ────────────────────────────────────────────
+// ── Task Hologram ───────────────────────────────────────────
 function TaskNode({ task, onClick }) {
   const meshRef = useRef();
   const [hovered, setHovered] = useState(false);
@@ -309,7 +309,7 @@ function GridFloor() {
   );
 }
 
-// ── Particle Field ───────────────────────────────────────────
+// ── Particle Field ──────────────────────────────────────────
 function ParticleField() {
   const pointsRef = useRef();
   const count = 500;
