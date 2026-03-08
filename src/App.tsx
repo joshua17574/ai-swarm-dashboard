@@ -384,14 +384,14 @@ export default function App() {
             className={`view-toggle-btn ${viewMode === 'swarm' ? 'active' : ''}`}
             onClick={() => setViewMode('swarm')}
           >
-            <span className="view-toggle-icon">\u{1F30C}</span>
+            <span className="view-toggle-icon">{'\u{1F30C}'}</span>
             Swarm
           </button>
           <button
             className={`view-toggle-btn ${viewMode === 'missions' ? 'active' : ''}`}
             onClick={() => setViewMode('missions')}
           >
-            <span className="view-toggle-icon">\u{1F4CB}</span>
+            <span className="view-toggle-icon">{'\u{1F4CB}'}</span>
             Missions
             <span className="view-toggle-badge">{missionCounts.in_progress}</span>
           </button>
