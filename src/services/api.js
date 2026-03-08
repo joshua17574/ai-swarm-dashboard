@@ -1,4 +1,4 @@
-// ── API Service Layer (Client-Side) ──────────────────────────
+// ── API Service Layer (Client-Side) ──────────────────────────────
 // All calls route to the local simulation engine — no HTTP needed
 import simulation from './simulation';
 
