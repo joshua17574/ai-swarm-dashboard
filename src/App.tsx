@@ -1,6 +1,10 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useSimulatedAgents } from './useSimulatedAgents';
-import { Agent, AgentStatus } from './types';
+import { useMissions } from './useMissions';
+import { Agent, AgentStatus, Mission, MissionPriority, MissionStatus } from './types';
+import { AGENTS } from './agents';
+
+type ViewMode = 'swarm' | 'missions';
 
 const STATUS_COLORS: Record<AgentStatus, string> = {
   active: '#4ade80',
@@ -16,12 +20,36 @@ const STATUS_LABELS: Record<AgentStatus, string> = {
   error: 'ERROR',
 };
 
+const PRIORITY_COLORS: Record<MissionPriority, string> = {
+  critical: '#f87171',
+  high: '#fb923c',
+  normal: '#60a5fa',
+  low: '#64748b',
+};
+
+const PRIORITY_LABELS: Record<MissionPriority, string> = {
+  critical: 'CRITICAL',
+  high: 'HIGH',
+  normal: 'NORMAL',
+  low: 'LOW',
+};
+
+const COLUMN_CONFIG: { key: MissionStatus; label: string; icon: string; color: string }[] = [
+  { key: 'queued', label: 'Queued', icon: '\u23F3', color: '#64748b' },
+  { key: 'in_progress', label: 'In Progress', icon: '\u26A1', color: '#fbbf24' },
+  { key: 'completed', label: 'Completed', icon: '\u2705', color: '#4ade80' },
+];
+
 function timeAgo(ts: number): string {
   const diff = Math.floor((Date.now() - ts) / 1000);
   if (diff < 5) return 'just now';
   if (diff < 60) return `${diff}s ago`;
   if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
   return `${Math.floor(diff / 3600)}h ago`;
+}
+
+function getAgent(id: string): Agent | undefined {
+  return AGENTS.find(a => a.id === id);
 }
 
 /* ========== Particle Background ========== */
@@ -211,13 +239,102 @@ function DetailPanel({ agent }: { agent: Agent }) {
   );
 }
 
+/* ========== Mission Card ========== */
+function MissionCard({ mission }: { mission: Mission }) {
+  const agent = getAgent(mission.assignedAgentId);
+  const priorityColor = PRIORITY_COLORS[mission.priority];
+
+  return (
+    <div className={`mission-card mission-card-${mission.status}`}>
+      <div className="mission-card-top">
+        <span
+          className="mission-priority-badge"
+          style={{ background: priorityColor + '20', color: priorityColor, borderColor: priorityColor + '50' }}
+        >
+          {PRIORITY_LABELS[mission.priority]}
+        </span>
+        {mission.status === 'completed' && (
+          <span className="mission-complete-check">\u2713</span>
+        )}
+      </div>
+      <h4 className="mission-card-title">{mission.title}</h4>
+      <p className="mission-card-desc">{mission.description}</p>
+
+      {mission.status === 'in_progress' && (
+        <div className="mission-progress-wrap">
+          <div className="mission-progress-bar">
+            <div
+              className="mission-progress-fill"
+              style={{ width: `${mission.progress}%`, background: agent?.color || '#a78bfa' }}
+            />
+          </div>
+          <span className="mission-progress-pct">{mission.progress}%</span>
+        </div>
+      )}
+
+      <div className="mission-card-footer">
+        <div className="mission-agent-tag">
+          <span className="mission-agent-emoji">{agent?.emoji || '\u2728'}</span>
+          <span className="mission-agent-name">{agent?.name || 'Unknown'}</span>
+        </div>
+        <span className="mission-time">
+          {mission.status === 'completed' && mission.completedAt
+            ? timeAgo(mission.completedAt)
+            : mission.status === 'in_progress' && mission.startedAt
+            ? timeAgo(mission.startedAt)
+            : timeAgo(mission.createdAt)}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/* ========== Mission Board (Kanban) ========== */
+function MissionBoard({ missions }: { missions: Mission[] }) {
+  const grouped = useMemo(() => {
+    const g: Record<MissionStatus, Mission[]> = { queued: [], in_progress: [], completed: [] };
+    missions.forEach(m => g[m.status].push(m));
+    // Sort: critical first within each column
+    const priorityOrder: Record<MissionPriority, number> = { critical: 0, high: 1, normal: 2, low: 3 };
+    Object.values(g).forEach(arr => arr.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]));
+    // Completed: most recent first
+    g.completed.sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0));
+    return g;
+  }, [missions]);
+
+  return (
+    <div className="kanban-board">
+      {COLUMN_CONFIG.map(col => (
+        <div key={col.key} className="kanban-column">
+          <div className="kanban-column-header">
+            <span className="kanban-col-icon">{col.icon}</span>
+            <span className="kanban-col-label">{col.label}</span>
+            <span className="kanban-col-count" style={{ background: col.color + '25', color: col.color }}>
+              {grouped[col.key].length}
+            </span>
+          </div>
+          <div className="kanban-column-body">
+            {grouped[col.key].map(mission => (
+              <MissionCard key={mission.id} mission={mission} />
+            ))}
+            {grouped[col.key].length === 0 && (
+              <div className="kanban-empty">No missions</div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /* ========== Main App ========== */
 export default function App() {
   const { agents, feed } = useSimulatedAgents();
+  const missions = useMissions();
   const [selectedId, setSelectedId] = useState<string>('nebula');
+  const [viewMode, setViewMode] = useState<ViewMode>('swarm');
   const [time, setTime] = useState(Date.now());
 
-  // Force re-render for timeAgo updates
   useEffect(() => {
     const t = setInterval(() => setTime(Date.now()), 5000);
     return () => clearInterval(t);
@@ -238,6 +355,12 @@ export default function App() {
     return c;
   }, [agents]);
 
+  const missionCounts = useMemo(() => {
+    const c = { queued: 0, in_progress: 0, completed: 0 };
+    missions.forEach(m => c[m.status]++);
+    return c;
+  }, [missions]);
+
   const orbitRadius = 200;
   const centerXY = 300;
 
@@ -254,74 +377,95 @@ export default function App() {
             <span className="header-sub">{agents.length} agents online</span>
           </div>
         </div>
+
+        {/* View Toggle */}
+        <div className="view-toggle">
+          <button
+            className={`view-toggle-btn ${viewMode === 'swarm' ? 'active' : ''}`}
+            onClick={() => setViewMode('swarm')}
+          >
+            <span className="view-toggle-icon">\u{1F30C}</span>
+            Swarm
+          </button>
+          <button
+            className={`view-toggle-btn ${viewMode === 'missions' ? 'active' : ''}`}
+            onClick={() => setViewMode('missions')}
+          >
+            <span className="view-toggle-icon">\u{1F4CB}</span>
+            Missions
+            <span className="view-toggle-badge">{missionCounts.in_progress}</span>
+          </button>
+        </div>
+
         <div className="header-stats">
-          {(Object.keys(counts) as AgentStatus[]).map((s) => (
-            <div key={s} className="header-stat">
-              <span className="header-stat-dot" style={{ background: STATUS_COLORS[s] }} />
-              <span className="header-stat-count">{counts[s]}</span>
-              <span className="header-stat-label">{s}</span>
-            </div>
-          ))}
+          {viewMode === 'swarm'
+            ? (Object.keys(counts) as AgentStatus[]).map((s) => (
+                <div key={s} className="header-stat">
+                  <span className="header-stat-dot" style={{ background: STATUS_COLORS[s] }} />
+                  <span className="header-stat-count">{counts[s]}</span>
+                  <span className="header-stat-label">{s}</span>
+                </div>
+              ))
+            : COLUMN_CONFIG.map((col) => (
+                <div key={col.key} className="header-stat">
+                  <span className="header-stat-dot" style={{ background: col.color }} />
+                  <span className="header-stat-count">{missionCounts[col.key]}</span>
+                  <span className="header-stat-label">{col.label}</span>
+                </div>
+              ))}
         </div>
       </header>
 
-      <div className="main-layout">
-        {/* Orbit Visualization */}
-        <div className="orbit-container">
-          <ConnectionLines
-            agents={orbitAgents}
-            radius={orbitRadius}
-            centerX={centerXY}
-            centerY={centerXY}
-            activeIds={activeIds}
-          />
+      {/* ===== SWARM VIEW ===== */}
+      {viewMode === 'swarm' && (
+        <div className="main-layout">
+          <div className="orbit-container">
+            <ConnectionLines
+              agents={orbitAgents}
+              radius={orbitRadius}
+              centerX={centerXY}
+              centerY={centerXY}
+              activeIds={activeIds}
+            />
+            <div className="orbit-ring ring-1" />
+            <div className="orbit-ring ring-2" />
 
-          {/* Orbit Rings */}
-          <div className="orbit-ring ring-1" />
-          <div className="orbit-ring ring-2" />
-
-          {/* Nebula Center */}
-          <div
-            className={`nebula-center ${selectedId === 'nebula' ? 'selected' : ''}`}
-            onClick={() => setSelectedId('nebula')}
-          >
-            <div className="nebula-core-glow" />
-            <div className="nebula-core">
-              <span className="nebula-emoji">{nebula.emoji}</span>
+            <div
+              className={`nebula-center ${selectedId === 'nebula' ? 'selected' : ''}`}
+              onClick={() => setSelectedId('nebula')}
+            >
+              <div className="nebula-core-glow" />
+              <div className="nebula-core">
+                <span className="nebula-emoji">{nebula.emoji}</span>
+              </div>
+              <div className="nebula-label">NEBULA</div>
+              <div className="nebula-sub">orchestrator</div>
             </div>
-            <div className="nebula-label">NEBULA</div>
-            <div className="nebula-sub">orchestrator</div>
+
+            {orbitAgents.map((agent, i) => {
+              const angle = (2 * Math.PI * i) / orbitAgents.length - Math.PI / 2;
+              return (
+                <AgentNode
+                  key={agent.id}
+                  agent={agent}
+                  angle={angle}
+                  radius={orbitRadius}
+                  onClick={() => setSelectedId(agent.id)}
+                  isSelected={selectedId === agent.id}
+                />
+              );
+            })}
           </div>
 
-          {/* Orbiting Agents */}
-          {orbitAgents.map((agent, i) => {
-            const angle = (2 * Math.PI * i) / orbitAgents.length - Math.PI / 2;
-            return (
-              <AgentNode
-                key={agent.id}
-                agent={agent}
-                angle={angle}
-                radius={orbitRadius}
-                onClick={() => setSelectedId(agent.id)}
-                isSelected={selectedId === agent.id}
-              />
-            );
-          })}
-        </div>
-
-        {/* Sidebar */}
-        <div className="sidebar">
-          <DetailPanel agent={selected} />
-
-          <div className="feed-section">
-            <div className="feed-header">
-              <h3 className="feed-title">LIVE ACTIVITY</h3>
-              <span className="feed-badge">{feed.length}</span>
-            </div>
-            <div className="feed-list">
-              {feed.slice(0, 20).map((evt) => {
-                const evtAgent = agents.find((a) => a.id === evt.agentId);
-                return (
+          <div className="sidebar">
+            <DetailPanel agent={selected} />
+            <div className="feed-section">
+              <div className="feed-header">
+                <h3 className="feed-title">LIVE ACTIVITY</h3>
+                <span className="feed-badge">{feed.length}</span>
+              </div>
+              <div className="feed-list">
+                {feed.slice(0, 20).map((evt) => (
                   <div
                     key={evt.id}
                     className={`feed-item ${evt.agentId === selectedId ? 'feed-highlight' : ''}`}
@@ -336,12 +480,19 @@ export default function App() {
                     </div>
                     <span className="feed-time">{timeAgo(evt.timestamp)}</span>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* ===== MISSIONS VIEW ===== */}
+      {viewMode === 'missions' && (
+        <div className="missions-layout">
+          <MissionBoard missions={missions} />
+        </div>
+      )}
     </div>
   );
 }
