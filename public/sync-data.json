@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-03-09T14:01:09Z",
+  "synced_at": "2026-03-09T06:36:17Z",
   "agents": [
     {
       "slug": "youtube-shorts-creator",
@@ -11,49 +11,49 @@
     {
       "slug": "content-strategist-agent",
       "name": "Content Strategist Agent",
-      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page.",
+      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs with consistent brand voice.",
       "tools": ["Web Search", "Code", "Memory", "Agents", "twitter", "youtube_data_api", "facebook_pages"],
       "is_disabled": false
     },
     {
       "slug": "research-intelligence-agent",
       "name": "Research & Intelligence Agent",
-      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs.",
+      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, crypto/airdrop vetting, and news monitoring.",
       "tools": ["Web Search", "Web Scraping", "Web", "Code", "Memory"],
       "is_disabled": false
     },
     {
       "slug": "telegram-notifier",
       "name": "Telegram Notifier",
-      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries.",
+      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.",
       "tools": ["Communication", "Core"],
       "is_disabled": false
     },
     {
       "slug": "x-twitter-engagement-agent",
       "name": "X Twitter Engagement Agent",
-      "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter.",
+      "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter. Runs automatically every 6 hours.",
       "tools": ["twitter"],
       "is_disabled": false
     },
     {
       "slug": "spotify-music-manager",
       "name": "Spotify Music Manager",
-      "description": "Manages your Spotify account end-to-end for joshua.daquipil0817@gmail.com — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback.",
+      "description": "Manages your Spotify account end-to-end — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
       "tools": ["spotify"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-file-manager",
       "name": "Google Drive File Manager",
-      "description": "Manages files and folders on Google Drive for joshua.daquipil0817@gmail.com — handles uploading, downloading, searching, organizing folders, and sharing files.",
+      "description": "Manages files and folders on Google Drive — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-manager",
       "name": "Google Drive Manager",
-      "description": "Manages Google Drive for joshua.daquipil0817@gmail.com via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
+      "description": "Manages Google Drive via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
@@ -67,14 +67,14 @@
     {
       "slug": "kwen-net-page-manager",
       "name": "Kwen Net Page Manager",
-      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity.",
+      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity every 4 hours.",
       "tools": ["facebook_pages"],
       "is_disabled": false
     },
     {
       "slug": "pr-monitor",
       "name": "PR Monitor",
-      "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI.",
+      "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI. Delivers smart summaries to reduce notification noise.",
       "tools": ["Web", "github"],
       "is_disabled": false
     },
@@ -129,9 +129,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */1 * * *",
       "is_active": true,
-      "run_count": 16,
-      "last_run_at": "2026-03-09T13:01:00Z",
-      "next_run_at": "2026-03-09T15:01:00Z"
+      "run_count": 8,
+      "last_run_at": "2026-03-09T05:36:00Z",
+      "next_run_at": "2026-03-09T07:00:00Z"
     },
     {
       "slug": "youtube-short-2200-utc",
@@ -173,9 +173,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 13 * * *",
       "is_active": true,
-      "run_count": 2,
-      "last_run_at": "2026-03-09T13:00:00Z",
-      "next_run_at": "2026-03-10T13:00:00Z"
+      "run_count": 1,
+      "last_run_at": "2026-03-08T13:00:00Z",
+      "next_run_at": "2026-03-09T13:00:00Z"
     },
     {
       "slug": "youtube-short-1000-utc",
@@ -184,9 +184,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 10 * * *",
       "is_active": true,
-      "run_count": 1,
-      "last_run_at": "2026-03-09T10:00:00Z",
-      "next_run_at": "2026-03-10T10:00:00Z"
+      "run_count": 0,
+      "last_run_at": null,
+      "next_run_at": "2026-03-09T10:00:00Z"
     },
     {
       "slug": "youtube-shorts-creator-check",
@@ -195,9 +195,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */6 * * *",
       "is_active": true,
-      "run_count": 5,
-      "last_run_at": "2026-03-09T12:00:00Z",
-      "next_run_at": "2026-03-09T18:00:00Z"
+      "run_count": 4,
+      "last_run_at": "2026-03-09T06:00:00Z",
+      "next_run_at": "2026-03-09T12:00:00Z"
     },
     {
       "slug": "spotify-music-manager-check",
@@ -217,9 +217,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 8,20 * * *",
       "is_active": true,
-      "run_count": 5,
-      "last_run_at": "2026-03-09T08:00:00Z",
-      "next_run_at": "2026-03-09T20:00:00Z"
+      "run_count": 4,
+      "last_run_at": "2026-03-08T20:00:00Z",
+      "next_run_at": "2026-03-09T08:00:00Z"
     },
     {
       "slug": "github-repo-manager-check",
@@ -228,9 +228,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */4 * * *",
       "is_active": true,
-      "run_count": 1,
-      "last_run_at": "2026-03-09T12:00:00Z",
-      "next_run_at": "2026-03-09T16:00:00Z"
+      "run_count": 0,
+      "last_run_at": null,
+      "next_run_at": "2026-03-09T08:00:00Z"
     },
     {
       "slug": "crypto-news-to-kwen-net",
@@ -239,9 +239,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */6 * * *",
       "is_active": true,
-      "run_count": 7,
-      "last_run_at": "2026-03-09T12:00:00Z",
-      "next_run_at": "2026-03-09T18:00:00Z"
+      "run_count": 6,
+      "last_run_at": "2026-03-09T06:00:00Z",
+      "next_run_at": "2026-03-09T12:00:00Z"
     },
     {
       "slug": "kwen-net-page-manager-check",
@@ -250,9 +250,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */4 * * *",
       "is_active": true,
-      "run_count": 8,
-      "last_run_at": "2026-03-09T12:00:00Z",
-      "next_run_at": "2026-03-09T16:00:00Z"
+      "run_count": 6,
+      "last_run_at": "2026-03-09T04:00:00Z",
+      "next_run_at": "2026-03-09T08:00:00Z"
     },
     {
       "slug": "daily-news-digest",
@@ -261,9 +261,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 */6 * * *",
       "is_active": true,
-      "run_count": 7,
-      "last_run_at": "2026-03-09T12:00:00Z",
-      "next_run_at": "2026-03-09T18:00:00Z"
+      "run_count": 6,
+      "last_run_at": "2026-03-09T06:00:00Z",
+      "next_run_at": "2026-03-09T12:00:00Z"
     },
     {
       "slug": "x-twitter-engagement-agent-check",
@@ -274,7 +274,7 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": null,
-      "next_run_at": "2026-03-09T18:00:00Z"
+      "next_run_at": "2026-03-09T12:00:00Z"
     },
     {
       "slug": "weekly-review",
@@ -294,151 +294,151 @@
       "trigger_type": "cron",
       "cron_expression": "0 9,14 * * 1-5",
       "is_active": true,
-      "run_count": 1,
-      "last_run_at": "2026-03-09T09:00:00Z",
-      "next_run_at": "2026-03-10T09:00:00Z"
+      "run_count": 0,
+      "last_run_at": null,
+      "next_run_at": "2026-03-09T09:00:00Z"
     }
   ],
   "recent_tasks": [
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #17",
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #9",
       "status": "in_progress",
-      "created_at": "2026-03-09T14:01:09Z",
-      "updated_at": "2026-03-09T14:01:09Z",
+      "created_at": "2026-03-09T06:36:17Z",
+      "updated_at": "2026-03-09T06:36:17Z",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
-      "title": "Produce and Upload YouTube Short Content",
+      "title": "YouTube Shorts Creator Check - Execution #4",
       "status": "in_progress",
-      "created_at": "2026-03-09T13:24:26Z",
-      "updated_at": "2026-03-09T13:58:09Z",
-      "description_preview": "Verification, production, and delivery process for a new YouTube Short, including final link reporting..."
-    },
-    {
-      "title": "Daily YouTube Short Production v2.1 — Master Cinematic Pipeline - Execution #2",
-      "status": "completed",
-      "created_at": "2026-03-09T13:04:03Z",
-      "updated_at": "2026-03-09T13:17:03Z",
-      "description_preview": "Automated task from trigger 'YouTube Short 13:00 UTC'"
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #16",
-      "status": "completed",
-      "created_at": "2026-03-09T13:00:29Z",
-      "updated_at": "2026-03-09T13:01:29Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "Execution #5",
-      "status": "failed",
-      "created_at": "2026-03-09T12:14:14Z",
-      "updated_at": "2026-03-09T13:00:14Z",
+      "created_at": "2026-03-09T06:12:38Z",
+      "updated_at": "2026-03-09T06:28:00Z",
       "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
     },
     {
-      "title": "Execution #8",
-      "status": "failed",
-      "created_at": "2026-03-09T12:12:10Z",
-      "updated_at": "2026-03-09T13:00:10Z",
-      "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
-    },
-    {
-      "title": "Execution #1",
-      "status": "failed",
-      "created_at": "2026-03-09T12:08:22Z",
-      "updated_at": "2026-03-09T13:00:22Z",
-      "description_preview": "Automated task from trigger 'GitHub Repo Manager Check'"
-    },
-    {
-      "title": "Crypto News from X to Kwen Net Facebook - Execution #7",
+      "title": "Daily News Digest - Execution #6",
       "status": "completed",
-      "created_at": "2026-03-09T12:09:03Z",
-      "updated_at": "2026-03-09T12:09:03Z",
-      "description_preview": "Automated task from trigger 'Crypto News to Kwen Net'"
-    },
-    {
-      "title": "Daily News Digest - Execution #7",
-      "status": "completed",
-      "created_at": "2026-03-09T12:06:04Z",
-      "updated_at": "2026-03-09T12:06:04Z",
+      "created_at": "2026-03-09T06:20:07Z",
+      "updated_at": "2026-03-09T06:27:00Z",
       "description_preview": "Automated task from trigger 'Daily News Digest'"
     },
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #15",
+      "title": "Crypto News from X to Kwen Net Facebook - Execution #6",
       "status": "completed",
-      "created_at": "2026-03-09T12:01:06Z",
-      "updated_at": "2026-03-09T12:01:06Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+      "created_at": "2026-03-09T06:23:18Z",
+      "updated_at": "2026-03-09T06:27:00Z",
+      "description_preview": "Automated task from trigger 'Crypto News to Kwen Net'"
     },
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #14",
-      "status": "completed",
-      "created_at": "2026-03-09T11:01:09Z",
-      "updated_at": "2026-03-09T11:01:09Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "Daily YouTube Short Production v2.1 — Master Cinematic Pipeline - Execution #1",
-      "status": "completed",
-      "created_at": "2026-03-09T10:06:30Z",
-      "updated_at": "2026-03-09T11:06:30Z",
-      "description_preview": "Automated task from trigger 'YouTube Short 10:00 UTC'"
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #13",
-      "status": "completed",
-      "created_at": "2026-03-09T10:02:17Z",
-      "updated_at": "2026-03-09T11:02:17Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "PR Review Check - Execution #1",
+      "title": "Regenerate and Save Dark Oxygen Video",
       "status": "failed",
-      "created_at": "2026-03-09T09:46:51Z",
-      "updated_at": "2026-03-09T09:46:51Z",
-      "description_preview": "Automated task from trigger 'PR Monitor Check'"
+      "created_at": "2026-03-09T05:32:38Z",
+      "updated_at": "2026-03-09T06:15:00Z",
+      "description_preview": "The Dark Oxygen YouTube Short video is being regenerated and saved to the workspace for further use"
     },
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #12",
+      "title": "Update Agency Dashboard with Documentation and Playbooks",
       "status": "completed",
-      "created_at": "2026-03-09T09:34:41Z",
-      "updated_at": "2026-03-09T09:34:41Z",
+      "created_at": "2026-03-09T05:51:02Z",
+      "updated_at": "2026-03-09T05:41:00Z",
+      "description_preview": "This task involves updating the agency-dashboard repository with a comprehensive set of playbook documents"
+    },
+    {
+      "title": "Synchronize Files Between GitHub Repositories",
+      "status": "completed",
+      "created_at": "2026-03-09T05:30:21Z",
+      "updated_at": "2026-03-09T05:51:00Z",
+      "description_preview": "Synchronizes content between two GitHub repositories by cloning, finding missing files, and committing"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #8",
+      "status": "completed",
+      "created_at": "2026-03-09T05:32:29Z",
+      "updated_at": "2026-03-09T05:36:00Z",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #11",
-      "status": "completed",
-      "created_at": "2026-03-09T08:47:26Z",
-      "updated_at": "2026-03-09T08:47:26Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "Execution #7",
+      "title": "Deploy Application Pages and UI Components",
       "status": "failed",
-      "created_at": "2026-03-09T08:12:45Z",
-      "updated_at": "2026-03-09T09:12:45Z",
+      "created_at": "2026-03-09T04:26:48Z",
+      "updated_at": "2026-03-09T05:00:00Z",
+      "description_preview": "Deploys a set of core application pages and reusable UI components to build out the front-end structure"
+    },
+    {
+      "title": "Kwen Net Page Manager Check - Execution #6",
+      "status": "failed",
+      "created_at": "2026-03-09T04:27:40Z",
+      "updated_at": "2026-03-09T04:30:00Z",
       "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
     },
     {
-      "title": "Hourly Airdrop Digest - Execution #5",
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #7",
       "status": "completed",
-      "created_at": "2026-03-09T08:13:34Z",
-      "updated_at": "2026-03-09T08:13:34Z",
-      "description_preview": "Automated task from trigger 'Daily Airdrop Digest'"
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #10",
-      "status": "completed",
-      "created_at": "2026-03-09T07:45:04Z",
-      "updated_at": "2026-03-09T07:45:04Z",
+      "created_at": "2026-03-09T04:27:23Z",
+      "updated_at": "2026-03-09T04:30:00Z",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
-      "title": "Execution #4",
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #6",
+      "status": "completed",
+      "created_at": "2026-03-09T03:28:19Z",
+      "updated_at": "2026-03-09T03:30:00Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #5",
+      "status": "completed",
+      "created_at": "2026-03-09T02:30:03Z",
+      "updated_at": "2026-03-09T02:30:00Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #4",
+      "status": "completed",
+      "created_at": "2026-03-09T01:28:00Z",
+      "updated_at": "2026-03-09T01:30:00Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Optimize YouTube Shorts Pipeline and Re-upload Content",
+      "status": "completed",
+      "created_at": "2026-03-09T00:43:19Z",
+      "updated_at": "2026-03-09T00:45:00Z",
+      "description_preview": "This task addresses content re-uploading and enhances the YouTube Shorts automation pipeline"
+    },
+    {
+      "title": "Kwen Net Page Manager Check - Execution #5",
       "status": "failed",
-      "created_at": "2026-03-09T06:12:38Z",
-      "updated_at": "2026-03-09T07:12:38Z",
+      "created_at": "2026-03-09T00:28:03Z",
+      "updated_at": "2026-03-09T00:30:00Z",
+      "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
+    },
+    {
+      "title": "Build Agent Directory Web Application",
+      "status": "failed",
+      "created_at": "2026-03-08T23:28:06Z",
+      "updated_at": "2026-03-09T00:30:00Z",
+      "description_preview": "Initialize and build a responsive Agent Directory platform using Next.js and Tailwind CSS."
+    },
+    {
+      "title": "Automated High-Quality Multi-Scene Video Production",
+      "status": "completed",
+      "created_at": "2026-03-09T00:31:52Z",
+      "updated_at": "2026-03-09T00:30:00Z",
+      "description_preview": "Automate the professional production of a multi-scene video by processing audio segments, rendering scenes"
+    },
+    {
+      "title": "YouTube Shorts Creator Check - Execution #3",
+      "status": "failed",
+      "created_at": "2026-03-09T00:31:00Z",
+      "updated_at": "2026-03-09T00:30:00Z",
       "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #3",
+      "status": "completed",
+      "created_at": "2026-03-09T00:26:34Z",
+      "updated_at": "2026-03-09T00:30:00Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
     }
   ]
 }
