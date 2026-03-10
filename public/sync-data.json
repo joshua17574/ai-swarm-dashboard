@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-03-10T08:05:22Z",
+  "synced_at": "2026-03-10T09:11:38Z",
   "agents": [
     {
       "slug": "ai-debate-scorer",
@@ -53,7 +53,7 @@
     {
       "slug": "content-strategist-agent",
       "name": "Content Strategist Agent",
-      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, and dispatches briefs to platform-specific agents.",
+      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs with consistent brand voice.",
       "tools": ["Web Search", "Code", "Memory", "Agents", "twitter", "youtube_data_api", "facebook_pages"],
       "is_disabled": false
     },
@@ -160,13 +160,13 @@
     {
       "slug": "the-great-ai-debate",
       "name": "The Great AI Debate",
-      "description": "Every 5 minutes, OpenAI Champion and Anthropic Superiority Debater clash in a fiery debate about who represents the greatest achievement in AI history.",
+      "description": "Every 5 minutes, OpenAI Champion and Anthropic Superiority Debater clash in a fiery debate about who represents the greatest achievement in AI history. Full transcript delivered via Telegram.",
       "trigger_type": "cron",
       "cron_expression": "0 * * * *",
       "is_active": true,
       "run_count": 4,
-      "last_run_at": "2026-03-10T07:16:22Z",
-      "next_run_at": "2026-03-10T09:00:00Z"
+      "last_run_at": "2 hours ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "ai-debate-arena-every-5-minutes",
@@ -175,86 +175,86 @@
       "trigger_type": "cron",
       "cron_expression": "0 * * * *",
       "is_active": true,
-      "run_count": 4,
-      "last_run_at": "2026-03-10T07:06:22Z",
-      "next_run_at": "2026-03-10T09:00:00Z"
+      "run_count": 5,
+      "last_run_at": "an hour ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "x-weekly-growth-analytics",
       "name": "X Weekly Growth Analytics",
-      "description": "Every Sunday at 6 PM SGT: Pulls last 100 tweets and 50 mentions, analyzes engagement patterns, calculates follower velocity signals, generates comprehensive growth report.",
+      "description": "Every Sunday at 6 PM SGT: Pulls last 100 tweets and 50 mentions, analyzes engagement patterns by topic/format/timing, calculates follower velocity signals, generates comprehensive growth report with next-week recommendations, sends via Telegram.",
       "trigger_type": "cron",
       "cron_expression": "0 18 * * 0",
       "is_active": true,
       "run_count": 0,
-      "last_run_at": null,
-      "next_run_at": "2026-03-15T10:00:00Z"
+      "last_run_at": "Never",
+      "next_run_at": "5 days from now"
     },
     {
       "slug": "x-engagement-loop",
       "name": "X Engagement Loop",
-      "description": "Runs 3x daily (10 AM, 3 PM, 9 PM SGT): Checks mentions and replies to legitimate ones only (max 3, skip all spam). Retweets 3-5 quality posts from timeline.",
+      "description": "Runs 3x daily (10 AM, 3 PM, 9 PM SGT): Checks mentions and replies to legitimate ones only (max 3, skip all spam). Retweets 3-5 quality posts from timeline. ZERO original content — engagement only.",
       "trigger_type": "cron",
       "cron_expression": "0 10,15,21 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-10T07:12:22Z",
-      "next_run_at": "2026-03-10T13:00:00Z"
+      "last_run_at": "2 hours ago",
+      "next_run_at": "4 hours from now"
     },
     {
       "slug": "x-trend-jacker",
       "name": "X Trend-Jacker",
-      "description": "Runs every 4 hours: Scans for genuinely breaking news across AI, crypto, Trump/politics, markets, geopolitics. ONLY posts if a high-impact story is found.",
+      "description": "Runs every 4 hours: Scans for genuinely breaking news across AI, crypto, Trump/politics, markets, geopolitics. ONLY posts if a high-impact story is found (less than 2 hours old). Most runs produce zero posts — silence is better than noise. Max 1 tweet + 1 self-reply per run.",
       "trigger_type": "cron",
       "cron_expression": "0 */4 * * *",
       "is_active": true,
       "run_count": 4,
-      "last_run_at": "2026-03-10T08:04:47Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "an hour ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "x-strategic-reply-guy-engine",
       "name": "X Strategic Reply-Guy Engine",
-      "description": "Runs 2x daily (11 AM, 6 PM SGT): Searches for high-engagement tweets, crafts max 2 expert commentary tweets per run with self-replies.",
+      "description": "Runs 2x daily (11 AM, 6 PM SGT): Searches for high-engagement tweets, crafts max 2 expert commentary tweets per run with self-replies. Quality over quantity — posts nothing if no sharp take exists.",
       "trigger_type": "cron",
       "cron_expression": "0 11,18 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-10T03:05:22Z",
-      "next_run_at": "2026-03-10T10:00:00Z"
+      "last_run_at": "5 hours ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "x-original-content-morning",
       "name": "X Original Content — Morning",
-      "description": "Morning original content run (8 AM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets.",
+      "description": "Morning original content run (8 AM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets with proven hook frameworks. Adds self-reply engagement hooks. Threads on Tue/Fri.",
       "trigger_type": "cron",
       "cron_expression": "0 8 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "2026-03-10T00:05:22Z",
-      "next_run_at": "2026-03-11T00:00:00Z"
+      "last_run_at": "9 hours ago",
+      "next_run_at": "15 hours from now"
     },
     {
       "slug": "x-original-content-evening",
       "name": "X Original Content — Evening",
-      "description": "Evening original content run (7 PM SGT): Researches trending topics, posts max 1 original tweet with 1 self-reply. Only posts if the take is genuinely expert-level.",
+      "description": "Evening original content run (7 PM SGT): Researches trending topics, posts max 1 original tweet with 1 self-reply. Only posts if the take is genuinely expert-level. Skips entirely if morning run already covered the day's top stories.",
       "trigger_type": "cron",
       "cron_expression": "0 19 * * *",
       "is_active": true,
       "run_count": 0,
-      "last_run_at": null,
-      "next_run_at": "2026-03-10T11:00:00Z"
+      "last_run_at": "Never",
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "twitter-thread-curation-evening",
       "name": "Twitter Thread Curation — Evening",
-      "description": "Evening run (10 PM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.",
+      "description": "Evening run (10 PM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business. Evaluates with 5-dimension weighted scoring (7.0+ threshold), crafts premium quote-tweet copy, posts to @Daquipil0817, adds self-reply engagement hooks to each post, and sends Telegram digest.",
       "trigger_type": "cron",
       "cron_expression": "0 22 * * *",
       "is_active": true,
       "run_count": 0,
-      "last_run_at": null,
-      "next_run_at": "2026-03-10T14:00:00Z"
+      "last_run_at": "Never",
+      "next_run_at": "5 hours from now"
     },
     {
       "slug": "earnautobot-500-income-operator-check-2",
@@ -264,19 +264,19 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 0,
-      "last_run_at": null,
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "Never",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "daily-twitter-thread-curation",
       "name": "Twitter Thread Curation — Morning",
-      "description": "Morning run (10 AM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.",
+      "description": "Morning run (10 AM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business. Evaluates with 5-dimension weighted scoring (7.0+ threshold), crafts premium quote-tweet copy, posts to @Daquipil0817, adds self-reply engagement hooks to each post, and sends Telegram digest.",
       "trigger_type": "cron",
       "cron_expression": "0 10 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "2026-03-10T02:05:22Z",
-      "next_run_at": "2026-03-11T02:00:00Z"
+      "last_run_at": "7 hours ago",
+      "next_run_at": "17 hours from now"
     },
     {
       "slug": "earnautobot-500-income-operator-check",
@@ -286,8 +286,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-10T06:05:22Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "3 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "dashboard-sync",
@@ -296,9 +296,9 @@
       "trigger_type": "cron",
       "cron_expression": "0 * * * *",
       "is_active": true,
-      "run_count": 34,
-      "last_run_at": "2026-03-10T07:08:22Z",
-      "next_run_at": "2026-03-10T09:00:00Z"
+      "run_count": 35,
+      "last_run_at": "an hour ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "youtube-short-2200-utc",
@@ -308,8 +308,8 @@
       "cron_expression": "0 22 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-09T22:05:22Z",
-      "next_run_at": "2026-03-10T22:00:00Z"
+      "last_run_at": "11 hours ago",
+      "next_run_at": "13 hours from now"
     },
     {
       "slug": "youtube-short-1900-utc",
@@ -319,8 +319,8 @@
       "cron_expression": "0 19 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-09T19:05:22Z",
-      "next_run_at": "2026-03-10T19:00:00Z"
+      "last_run_at": "14 hours ago",
+      "next_run_at": "10 hours from now"
     },
     {
       "slug": "youtube-short-1700-utc",
@@ -330,8 +330,8 @@
       "cron_expression": "0 17 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-09T17:05:22Z",
-      "next_run_at": "2026-03-10T17:00:00Z"
+      "last_run_at": "16 hours ago",
+      "next_run_at": "8 hours from now"
     },
     {
       "slug": "youtube-short-1300-utc",
@@ -341,8 +341,8 @@
       "cron_expression": "0 13 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-09T13:05:22Z",
-      "next_run_at": "2026-03-10T13:00:00Z"
+      "last_run_at": "20 hours ago",
+      "next_run_at": "4 hours from now"
     },
     {
       "slug": "youtube-short-1000-utc",
@@ -352,8 +352,8 @@
       "cron_expression": "0 10 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "2026-03-09T10:05:22Z",
-      "next_run_at": "2026-03-10T10:00:00Z"
+      "last_run_at": "23 hours ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "youtube-shorts-creator-check",
@@ -363,8 +363,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 8,
-      "last_run_at": "2026-03-10T06:05:22Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "3 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "spotify-music-manager-check",
@@ -372,10 +372,10 @@
       "description": "Periodic check for Spotify Music Manager across spotify",
       "trigger_type": "cron",
       "cron_expression": "0 */1 * * *",
-      "is_active": false,
-      "run_count": 10,
-      "last_run_at": "2026-03-09T08:05:22Z",
-      "next_run_at": null
+      "is_active": true,
+      "run_count": 11,
+      "last_run_at": "10 minutes ago",
+      "next_run_at": "48 minutes from now"
     },
     {
       "slug": "hourly-airdrop-digest",
@@ -385,8 +385,8 @@
       "cron_expression": "0 8,20 * * *",
       "is_active": true,
       "run_count": 7,
-      "last_run_at": "2026-03-10T08:03:22Z",
-      "next_run_at": "2026-03-10T20:00:00Z"
+      "last_run_at": "an hour ago",
+      "next_run_at": "11 hours from now"
     },
     {
       "slug": "github-repo-manager-check",
@@ -396,8 +396,8 @@
       "cron_expression": "0 */4 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "2026-03-09T20:05:22Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "13 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "crypto-news-to-kwen-net",
@@ -407,8 +407,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 10,
-      "last_run_at": "2026-03-10T06:05:22Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "3 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "kwen-net-page-manager-check",
@@ -416,10 +416,10 @@
       "description": "Periodic check for Kwen Net Page Manager across facebook_pages",
       "trigger_type": "cron",
       "cron_expression": "0 */4 * * *",
-      "is_active": false,
+      "is_active": true,
       "run_count": 10,
-      "last_run_at": "2026-03-09T20:05:22Z",
-      "next_run_at": null
+      "last_run_at": "13 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "daily-news-digest",
@@ -429,8 +429,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 10,
-      "last_run_at": "2026-03-10T06:05:22Z",
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "3 hours ago",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "x-twitter-engagement-agent-check",
@@ -440,8 +440,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 0,
-      "last_run_at": null,
-      "next_run_at": "2026-03-10T12:00:00Z"
+      "last_run_at": "Never",
+      "next_run_at": "3 hours from now"
     },
     {
       "slug": "weekly-review",
@@ -451,8 +451,8 @@
       "cron_expression": "0 18 * * 0",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "2026-03-09T10:05:22Z",
-      "next_run_at": "2026-03-15T10:00:00Z"
+      "last_run_at": "a day ago",
+      "next_run_at": "5 days from now"
     },
     {
       "slug": "pr-monitor-check",
@@ -461,151 +461,151 @@
       "trigger_type": "cron",
       "cron_expression": "0 9,14 * * 1-5",
       "is_active": true,
-      "run_count": 2,
-      "last_run_at": "2026-03-09T14:05:22Z",
-      "next_run_at": "2026-03-10T09:00:00Z"
+      "run_count": 3,
+      "last_run_at": "10 minutes ago",
+      "next_run_at": "5 hours from now"
     }
   ],
   "recent_tasks": [
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #35",
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #36",
       "status": "in_progress",
-      "created_at": "2026-03-10T08:05:22Z",
-      "updated_at": "2026-03-10T08:05:22Z",
+      "created_at": "7 seconds ago",
+      "updated_at": "7 seconds ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #6",
+      "status": "in_progress",
+      "created_at": "7 minutes ago",
+      "updated_at": "59 seconds ago",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
+    },
+    {
+      "title": "PR Review Check - Execution #3",
+      "status": "in_progress",
+      "created_at": "11 minutes ago",
+      "updated_at": "10 minutes ago",
+      "description_preview": "Automated task from trigger 'PR Monitor Check'"
+    },
+    {
+      "title": "Spotify Music Manager - Execution #11",
+      "status": "in_progress",
+      "created_at": "10 minutes ago",
+      "updated_at": "10 minutes ago",
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
+    },
+    {
+      "title": "Produce and Publish AI-Animated Video Content",
+      "status": "in_progress",
+      "created_at": "58 minutes ago",
+      "updated_at": "22 minutes ago",
+      "description_preview": "This process involves scripting, AI-driven animation, and final post-production to create and publish video content."
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #35",
+      "status": "completed",
+      "created_at": "an hour ago",
+      "updated_at": "an hour ago",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #5",
+      "status": "completed",
+      "created_at": "an hour ago",
+      "updated_at": "an hour ago",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
     },
     {
       "title": "X Trend-Jacker Engine - Execution #4",
       "status": "completed",
-      "created_at": "2026-03-10T08:02:22Z",
-      "updated_at": "2026-03-10T08:04:46Z",
+      "created_at": "an hour ago",
+      "updated_at": "an hour ago",
       "description_preview": "Automated task from trigger 'X Trend-Jacker'"
-    },
-    {
-      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #5",
-      "status": "in_progress",
-      "created_at": "2026-03-10T08:00:22Z",
-      "updated_at": "2026-03-10T08:03:22Z",
-      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
     },
     {
       "title": "Hourly Airdrop Digest - Execution #7",
       "status": "completed",
-      "created_at": "2026-03-10T08:00:22Z",
-      "updated_at": "2026-03-10T08:03:22Z",
+      "created_at": "an hour ago",
+      "updated_at": "an hour ago",
       "description_preview": "Automated task from trigger 'Daily Airdrop Digest'"
     },
     {
       "title": "Execute AI Video Generation Pipeline",
       "status": "failed",
-      "created_at": "2026-03-10T06:38:22Z",
-      "updated_at": "2026-03-10T08:01:22Z",
-      "description_preview": "This task involves identifying valid API endpoints for video generation, locating source media, and ..."
+      "created_at": "3 hours ago",
+      "updated_at": "an hour ago",
+      "description_preview": "This task involves identifying valid API endpoints for video generation, locating source media, and executing the pipeline."
     },
     {
       "title": "Automate GitHub Account Registration Process",
       "status": "failed",
-      "created_at": "2026-03-10T07:12:59Z",
-      "updated_at": "2026-03-10T07:59:22Z",
-      "description_preview": "This task automates the initial GitHub account registration process for a specific user, stopping at..."
+      "created_at": "2 hours ago",
+      "updated_at": "an hour ago",
+      "description_preview": "This task automates the initial GitHub account registration process for a specific user, stopping at email verification."
     },
     {
       "title": "Automate GitHub Account Registration Process",
       "status": "failed",
-      "created_at": "2026-03-10T06:59:11Z",
-      "updated_at": "2026-03-10T07:30:22Z",
-      "description_preview": "This task automates the initial GitHub account registration process up to the email verification ste..."
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "This task automates the initial GitHub account registration process up to the email verification step."
     },
     {
       "title": "The Great AI Debate: OpenAI vs Anthropic - Execution #4",
       "status": "completed",
-      "created_at": "2026-03-10T07:10:22Z",
-      "updated_at": "2026-03-10T07:16:22Z",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'The Great AI Debate'"
     },
     {
       "title": "X Engagement Loop Engine - Execution #2",
       "status": "completed",
-      "created_at": "2026-03-10T07:10:22Z",
-      "updated_at": "2026-03-10T07:12:22Z",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'X Engagement Loop'"
     },
     {
       "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #34",
       "status": "completed",
-      "created_at": "2026-03-10T07:05:22Z",
-      "updated_at": "2026-03-10T07:08:22Z",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
       "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #4",
       "status": "completed",
-      "created_at": "2026-03-10T07:00:57Z",
-      "updated_at": "2026-03-10T07:06:22Z",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
     },
     {
       "title": "Automated AI Company Debate and Scoring Pipeline",
       "status": "completed",
-      "created_at": "2026-03-10T06:58:16Z",
-      "updated_at": "2026-03-10T07:05:22Z",
-      "description_preview": "This task sets up an automated, recurring debate pipeline between OpenAI and Anthropic, including re..."
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "This task sets up an automated, recurring debate pipeline between OpenAI and Anthropic."
     },
     {
       "title": "Implement Agent Management System Components",
       "status": "completed",
-      "created_at": "2026-03-10T06:56:16Z",
-      "updated_at": "2026-03-10T07:05:22Z",
-      "description_preview": "Implemented a new agent management system by creating core types, data access logic, and frontend co..."
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "Implemented a new agent management system by creating core types, data access logic, and frontend components."
     },
     {
-      "title": " - Execution #2",
+      "title": "EarnAutoBot-500 Income Operator - Execution #2",
       "status": "failed",
-      "created_at": "2026-03-10T06:08:04Z",
-      "updated_at": "2026-03-10T07:05:22Z",
+      "created_at": "3 hours ago",
+      "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'EarnAutoBot-500 Income Operator Check'"
     },
     {
-      "title": " - Execution #8",
+      "title": "YouTube Shorts Creator - Execution #8",
       "status": "failed",
-      "created_at": "2026-03-10T06:00:10Z",
-      "updated_at": "2026-03-10T06:05:22Z",
+      "created_at": "3 hours ago",
+      "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
-    },
-    {
-      "title": "Automated ElevenLabs Registration and API Retrieval",
-      "status": "failed",
-      "created_at": "2026-03-10T05:33:28Z",
-      "updated_at": "2026-03-10T06:05:22Z",
-      "description_preview": "Automates the account creation process on ElevenLabs and securely retrieves the user's API key for f..."
-    },
-    {
-      "title": "The Great AI Debate: OpenAI vs Anthropic - Execution #3",
-      "status": "failed",
-      "created_at": "2026-03-10T06:09:29Z",
-      "updated_at": "2026-03-10T06:05:22Z",
-      "description_preview": "Automated task from trigger 'The Great AI Debate'"
-    },
-    {
-      "title": "Daily News Digest - Execution #10",
-      "status": "failed",
-      "created_at": "2026-03-10T06:08:49Z",
-      "updated_at": "2026-03-10T06:05:22Z",
-      "description_preview": "Automated task from trigger 'Daily News Digest'"
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #33",
-      "status": "completed",
-      "created_at": "2026-03-10T06:05:43Z",
-      "updated_at": "2026-03-10T06:05:22Z",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #3",
-      "status": "completed",
-      "created_at": "2026-03-10T06:01:10Z",
-      "updated_at": "2026-03-10T06:05:22Z",
-      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
     }
   ]
 }
