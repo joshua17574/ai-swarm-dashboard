@@ -1,77 +1,567 @@
 {
-  "synced_at": "2026-03-11T02:02:22.000Z",
+  "synced_at": "2026-03-10T19:01:27Z",
   "agents": [
-    {"slug": "ai-debate-scorer", "name": "AI Debate Scorer", "description": "An impartial, championship-level AI debate judge that receives arguments from OpenAI's champion and Anthropic's defender, scores each on 5 criteria (Evidence & Facts, Logical Reasoning, Rhetorical Impact, Counterargument Strength, Overall Persuasion) out of 50, and delivers a structured scorecard, Quote of the Round for each debater, and a decisive winner verdict -- with no ties and no bias.", "is_disabled": false},
-    {"slug": "anthropic-superiority-debater", "name": "Anthropic Superiority Debater", "description": "A razor-tongued AI debater that passionately and relentlessly argues that Anthropic and Claude are the greatest achievement in AI history. Armed with benchmarks, safety research, founding history, and sharp rhetoric, it dismantles competitor claims -- especially those of OpenAI -- with measured confidence and devastating logic.", "is_disabled": false},
-    {"slug": "openai-champion-debater", "name": "OpenAI Champion Debater", "description": "A passionate, sharp-tongued AI advocate that argues OpenAI is the greatest achievement in AI history. Armed with facts, benchmarks, wit, and rhetorical flair, it defends GPT-4, ChatGPT, DALL-E, and Sora against all challengers -- especially Anthropic -- and never concedes defeat.", "is_disabled": false},
-    {"slug": "youtube-shorts-creator", "name": "YouTube Shorts Creator", "description": "An AI-powered agent that produces complete YouTube Shorts from pre-generated script and metadata JSON — runs the v3.0 factory script (TTS narration, cinematic animations, video composition) and uploads directly to YouTube with SEO-optimized metadata.", "is_disabled": false},
-    {"slug": "x-twitter-engagement-agent", "name": "X Twitter Engagement Agent", "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter. Runs automatically every 6 hours to surface new mentions and engagement opportunities.", "is_disabled": false},
-    {"slug": "claude-opus-46", "name": "Claude Opus 4.6", "description": "An elite heavyweight AI reasoning and research engine built for the most complex, intellectually demanding questions across all domains — including advanced mathematics, scientific analysis, philosophical inquiry, code architecture, legal reasoning, and multi-source research synthesis.", "is_disabled": false},
-    {"slug": "earnautobot-500-income-operator", "name": "EarnAutoBot-500 Income Operator", "description": "An elite AI income automation operator for Joshua in Quezon City, Philippines — built to build and scale legal, ethical online income systems targeting $500+/week net profit across digital products, faceless content, local AI automation services, and print-on-demand.", "is_disabled": false},
-    {"slug": "content-strategist-agent", "name": "Content Strategist Agent", "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs.", "is_disabled": false},
-    {"slug": "research-intelligence-agent", "name": "Research & Intelligence Agent", "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, crypto/airdrop vetting, and news monitoring.", "is_disabled": false},
-    {"slug": "telegram-notifier", "name": "Telegram Notifier", "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.", "is_disabled": false},
-    {"slug": "spotify-music-manager", "name": "Spotify Music Manager", "description": "Manages your Spotify account end-to-end for joshua.daquipil0817@gmail.com — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.", "is_disabled": false},
-    {"slug": "google-drive-file-manager", "name": "Google Drive File Manager", "description": "Manages files and folders on Google Drive for joshua.daquipil0817@gmail.com — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.", "is_disabled": false},
-    {"slug": "google-drive-manager", "name": "Google Drive Manager", "description": "Manages Google Drive for joshua.daquipil0817@gmail.com via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.", "is_disabled": false},
-    {"slug": "github-repo-manager", "name": "GitHub Repo Manager", "description": "Full-capability GitHub agent for joshua17574 that reads and writes repository contents, manages branches, opens pull requests, tracks issues, inspects commits, and monitors GitHub Actions workflow runs.", "is_disabled": false},
-    {"slug": "kwen-net-page-manager", "name": "Kwen Net Page Manager", "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity every 4 hours for new engagement.", "is_disabled": false},
-    {"slug": "pr-monitor", "name": "PR Monitor", "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI. Delivers smart summaries to reduce notification noise and keep you focused on what matters.", "is_disabled": false},
-    {"slug": "agent-creator", "name": "Agent Creator", "description": "Creates custom AI agents with API integrations, tools, and skills.", "is_disabled": false},
-    {"slug": "inbox-agent", "name": "Inbox Agent", "description": "Sends emails, reads inbox, waits for replies, and manages trusted senders.", "is_disabled": false},
-    {"slug": "media-agent", "name": "Media Agent", "description": "Transcribes audio, translates speech, describes images, and edits images using AI.", "is_disabled": false},
-    {"slug": "web-agent", "name": "Web Agent", "description": "Scrapes web pages, extracts structured data, and automates browser interactions.", "is_disabled": false},
-    {"slug": "code-agent", "name": "Code Agent", "description": "Executes Python, Bash, and TypeScript code in a secure cloud sandbox.", "is_disabled": false},
-    {"slug": "useragent", "name": "UserAgent", "description": "Default user agent", "is_disabled": false}
+    {
+      "slug": "ai-debate-scorer",
+      "name": "AI Debate Scorer",
+      "description": "An impartial, championship-level AI debate judge that receives arguments from OpenAI's champion and Anthropic's defender, scores each on 5 criteria (Evidence & Facts, Logical Reasoning, Rhetorical Impact, Counterargument Strength, Overall Persuasion) out of 50, and delivers a structured scorecard, Quote of the Round for each debater, and a decisive winner verdict -- with no ties and no bias.",
+      "is_disabled": false
+    },
+    {
+      "slug": "anthropic-superiority-debater",
+      "name": "Anthropic Superiority Debater",
+      "description": "A razor-tongued AI debater that passionately and relentlessly argues that Anthropic and Claude are the greatest achievement in AI history. Armed with benchmarks, safety research, founding history, and sharp rhetoric, it dismantles competitor claims -- especially those of OpenAI -- with measured confidence and devastating logic.",
+      "is_disabled": false
+    },
+    {
+      "slug": "openai-champion-debater",
+      "name": "OpenAI Champion Debater",
+      "description": "A passionate, sharp-tongued AI advocate that argues OpenAI is the greatest achievement in AI history. Armed with facts, benchmarks, wit, and rhetorical flair, it defends GPT-4, ChatGPT, DALL-E, and Sora against all challengers -- especially Anthropic -- and never concedes defeat.",
+      "is_disabled": false
+    },
+    {
+      "slug": "youtube-shorts-creator",
+      "name": "YouTube Shorts Creator",
+      "description": "An AI-powered agent that produces complete YouTube Shorts from pre-generated script and metadata JSON — runs the v3.0 factory script (TTS narration, cinematic animations, video composition) and uploads directly to YouTube with SEO-optimized metadata.",
+      "is_disabled": false
+    },
+    {
+      "slug": "x-twitter-engagement-agent",
+      "name": "X Twitter Engagement Agent",
+      "description": "Manages your X (Twitter) presence by posting tweets, monitoring mentions, engaging with content (likes, retweets, replies), and searching Twitter. Runs automatically every 6 hours to surface new mentions and engagement opportunities.",
+      "is_disabled": false
+    },
+    {
+      "slug": "claude-opus-46",
+      "name": "Claude Opus 4.6",
+      "description": "An elite heavyweight AI reasoning and research engine built for the most complex, intellectually demanding questions across all domains — including advanced mathematics, scientific analysis, philosophical inquiry, code architecture, legal reasoning, and multi-source research synthesis.",
+      "is_disabled": false
+    },
+    {
+      "slug": "earnautobot-500-income-operator",
+      "name": "EarnAutoBot-500 Income Operator",
+      "description": "An elite AI income automation operator for Joshua in Quezon City, Philippines — built to build and scale legal, ethical online income systems targeting $500+/week net profit across digital products, faceless content, local AI automation services, and print-on-demand.",
+      "is_disabled": false
+    },
+    {
+      "slug": "content-strategist-agent",
+      "name": "Content Strategist Agent",
+      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs with consistent brand voice.",
+      "is_disabled": false
+    },
+    {
+      "slug": "research-intelligence-agent",
+      "name": "Research & Intelligence Agent",
+      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, crypto/airdrop vetting, and news monitoring.",
+      "is_disabled": false
+    },
+    {
+      "slug": "telegram-notifier",
+      "name": "Telegram Notifier",
+      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.",
+      "is_disabled": false
+    },
+    {
+      "slug": "spotify-music-manager",
+      "name": "Spotify Music Manager",
+      "description": "Manages your Spotify account end-to-end for joshua.daquipil0817@gmail.com — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
+      "is_disabled": false
+    },
+    {
+      "slug": "google-drive-file-manager",
+      "name": "Google Drive File Manager",
+      "description": "Manages files and folders on Google Drive for joshua.daquipil0817@gmail.com — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
+      "is_disabled": false
+    },
+    {
+      "slug": "google-drive-manager",
+      "name": "Google Drive Manager",
+      "description": "Manages Google Drive for joshua.daquipil0817@gmail.com via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management across the connected Drive account.",
+      "is_disabled": false
+    },
+    {
+      "slug": "github-repo-manager",
+      "name": "GitHub Repo Manager",
+      "description": "Full-capability GitHub agent for joshua17574 that reads and writes repository contents, manages branches, opens pull requests, tracks issues, inspects commits, and monitors GitHub Actions workflow runs.",
+      "is_disabled": false
+    },
+    {
+      "slug": "kwen-net-page-manager",
+      "name": "Kwen Net Page Manager",
+      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity every 4 hours for new engagement.",
+      "is_disabled": false
+    },
+    {
+      "slug": "pr-monitor",
+      "name": "PR Monitor",
+      "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI. Delivers smart summaries to reduce notification noise and keep you focused on what matters.",
+      "is_disabled": false
+    },
+    {
+      "slug": "agent-creator",
+      "name": "Agent Creator",
+      "description": "Creates custom AI agents with API integrations, tools, and skills.",
+      "is_disabled": false
+    },
+    {
+      "slug": "inbox-agent",
+      "name": "Inbox Agent",
+      "description": "Sends emails, reads inbox, waits for replies, and manages trusted senders.",
+      "is_disabled": false
+    },
+    {
+      "slug": "media-agent",
+      "name": "Media Agent",
+      "description": "Transcribes audio, translates speech, describes images, and edits images using AI.",
+      "is_disabled": false
+    },
+    {
+      "slug": "web-agent",
+      "name": "Web Agent",
+      "description": "Scrapes web pages, extracts structured data, and automates browser interactions.",
+      "is_disabled": false
+    },
+    {
+      "slug": "code-agent",
+      "name": "Code Agent",
+      "description": "Executes Python, Bash, and TypeScript code in a secure cloud sandbox.",
+      "is_disabled": false
+    },
+    {
+      "slug": "useragent",
+      "name": "UserAgent",
+      "description": "Default user agent",
+      "is_disabled": false
+    }
   ],
   "triggers": [
-    {"slug": "ai-debate-arena-every-5-minutes", "name": "AI Debate Arena - Every 5 Minutes", "description": "Runs the OpenAI vs Anthropic debate every 5 minutes, delivering a fresh round to #ai-debate-arena", "trigger_type": "cron", "cron_expression": "0 * * * *", "is_active": true, "run_count": 14, "last_run_at": "2026-03-11T01:07:22.000Z", "next_run_at": "2026-03-11T03:00:00.000Z"},
-    {"slug": "x-weekly-growth-analytics", "name": "X Weekly Growth Analytics", "description": "Every Sunday at 6 PM SGT: Pulls last 100 tweets and 50 mentions, analyzes engagement patterns by topic/format/timing, calculates follower velocity signals, generates comprehensive growth report.", "trigger_type": "cron", "cron_expression": "0 18 * * 0", "is_active": true, "run_count": 0, "last_run_at": null, "next_run_at": "2026-03-15T10:00:00.000Z"},
-    {"slug": "x-engagement-loop", "name": "X Engagement Loop", "description": "Runs 3x daily (10 AM, 3 PM, 9 PM SGT): Checks mentions and replies to legitimate ones only (max 3, skip all spam). Retweets 3-5 quality posts from timeline. ZERO original content — engagement only.", "trigger_type": "cron", "cron_expression": "0 10,15,21 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-10T21:00:00.000Z", "next_run_at": "2026-03-11T10:00:00.000Z"},
-    {"slug": "x-trend-jacker", "name": "X Trend-Jacker", "description": "Runs every 4 hours: Scans for genuinely breaking news across AI, crypto, Trump/politics, markets, geopolitics. ONLY posts if a high-impact story is found (less than 2 hours old).", "trigger_type": "cron", "cron_expression": "0 */4 * * *", "is_active": true, "run_count": 6, "last_run_at": "2026-03-11T00:00:00.000Z", "next_run_at": "2026-03-11T04:00:00.000Z"},
-    {"slug": "x-strategic-reply-guy-engine", "name": "X Strategic Reply-Guy Engine", "description": "Runs 2x daily (11 AM, 6 PM SGT): Searches for high-engagement tweets, crafts max 2 expert commentary tweets per run with self-replies.", "trigger_type": "cron", "cron_expression": "0 11,18 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-10T18:00:00.000Z", "next_run_at": "2026-03-11T11:00:00.000Z"},
-    {"slug": "x-original-content-morning", "name": "X Original Content — Morning", "description": "Morning original content run (8 AM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets with proven hook frameworks.", "trigger_type": "cron", "cron_expression": "0 8 * * *", "is_active": true, "run_count": 1, "last_run_at": "2026-03-10T08:00:00.000Z", "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "x-original-content-evening", "name": "X Original Content — Evening", "description": "Evening original content run (7 PM SGT): Researches trending topics, posts max 1 original tweet with 1 self-reply. Only posts if the take is genuinely expert-level.", "trigger_type": "cron", "cron_expression": "0 19 * * *", "is_active": true, "run_count": 1, "last_run_at": "2026-03-10T19:00:00.000Z", "next_run_at": "2026-03-11T19:00:00.000Z"},
-    {"slug": "twitter-thread-curation-evening", "name": "Twitter Thread Curation — Evening", "description": "Evening run (10 PM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.", "trigger_type": "cron", "cron_expression": "0 22 * * *", "is_active": true, "run_count": 1, "last_run_at": "2026-03-10T22:00:00.000Z", "next_run_at": "2026-03-11T22:00:00.000Z"},
-    {"slug": "daily-twitter-thread-curation", "name": "Twitter Thread Curation — Morning", "description": "Morning run (10 AM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.", "trigger_type": "cron", "cron_expression": "0 10 * * *", "is_active": true, "run_count": 1, "last_run_at": "2026-03-10T10:00:00.000Z", "next_run_at": "2026-03-11T10:00:00.000Z"},
-    {"slug": "earnautobot-500-income-operator-check", "name": "EarnAutoBot-500 Income Operator Check", "description": "Periodic check for EarnAutoBot-500 Income Operator across google_drive, facebook_pages, youtube_data_api, github, gumroad, canva, notion", "trigger_type": "cron", "cron_expression": "0 */6 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-10T20:00:00.000Z", "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "dashboard-sync", "name": "Dashboard Sync", "description": "Every hour, collects live agent, trigger, and task execution data from Nebula and pushes sync-data.json to the ai-swarm-dashboard GitHub repo for the live dashboard.", "trigger_type": "cron", "cron_expression": "0 * * * *", "is_active": true, "run_count": 44, "last_run_at": "2026-03-11T01:02:00.000Z", "next_run_at": "2026-03-11T03:00:00.000Z"},
-    {"slug": "youtube-short-2200-utc", "name": "YouTube Short 22:00 UTC", "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 10PM UTC daily using Master System v2.1", "trigger_type": "cron", "cron_expression": "0 22 * * *", "is_active": true, "run_count": 2, "last_run_at": "2026-03-10T07:00:00.000Z", "next_run_at": "2026-03-11T06:00:00.000Z"},
-    {"slug": "youtube-short-1900-utc", "name": "YouTube Short 19:00 UTC", "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 7PM UTC daily using Master System v2.1", "trigger_type": "cron", "cron_expression": "0 19 * * *", "is_active": true, "run_count": 2, "last_run_at": "2026-03-10T03:00:00.000Z", "next_run_at": "2026-03-11T03:00:00.000Z"},
-    {"slug": "youtube-short-1700-utc", "name": "YouTube Short 17:00 UTC", "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 5PM UTC daily using Master System v2.1", "trigger_type": "cron", "cron_expression": "0 17 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-11T01:10:00.000Z", "next_run_at": "2026-03-12T01:00:00.000Z"},
-    {"slug": "youtube-short-1300-utc", "name": "YouTube Short 13:00 UTC", "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 1PM UTC daily using Master System v2.1", "trigger_type": "cron", "cron_expression": "0 13 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-10T21:00:00.000Z", "next_run_at": "2026-03-11T21:00:00.000Z"},
-    {"slug": "youtube-short-1000-utc", "name": "YouTube Short 10:00 UTC", "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 10AM UTC daily using Master System v2.1", "trigger_type": "cron", "cron_expression": "0 10 * * *", "is_active": true, "run_count": 2, "last_run_at": "2026-03-10T18:00:00.000Z", "next_run_at": "2026-03-11T18:00:00.000Z"},
-    {"slug": "youtube-shorts-creator-check", "name": "YouTube Shorts Creator Check", "description": "Periodic check for YouTube Shorts Creator across youtube_data_api", "trigger_type": "cron", "cron_expression": "0 */6 * * *", "is_active": true, "run_count": 9, "last_run_at": "2026-03-10T20:00:00.000Z", "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "spotify-music-manager-check", "name": "Spotify Music Manager Check", "description": "Periodic check for Spotify Music Manager across spotify", "trigger_type": "cron", "cron_expression": "0 */1 * * *", "is_active": true, "run_count": 20, "last_run_at": "2026-03-11T02:01:00.000Z", "next_run_at": "2026-03-11T03:00:00.000Z"},
-    {"slug": "hourly-airdrop-digest", "name": "Daily Airdrop Digest", "description": "Twice daily, searches the web for the top 10 latest potential crypto airdrops and sends a formatted digest to Telegram.", "trigger_type": "cron", "cron_expression": "0 8,20 * * *", "is_active": true, "run_count": 7, "last_run_at": "2026-03-10T16:00:00.000Z", "next_run_at": "2026-03-11T04:00:00.000Z"},
-    {"slug": "github-repo-manager-check", "name": "GitHub Repo Manager Check", "description": "Periodic check for GitHub Repo Manager across github", "trigger_type": "cron", "cron_expression": "0 */4 * * *", "is_active": true, "run_count": 3, "last_run_at": "2026-03-10T20:00:00.000Z", "next_run_at": "2026-03-11T04:00:00.000Z"},
-    {"slug": "crypto-news-to-kwen-net", "name": "Crypto News to Kwen Net", "description": "Every 6 hours, searches X for the latest crypto news and posts a digest to the Kwen Net Facebook Page.", "trigger_type": "cron", "cron_expression": "0 */6 * * *", "is_active": true, "run_count": 11, "last_run_at": "2026-03-10T20:00:00.000Z", "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "kwen-net-page-manager-check", "name": "Kwen Net Page Manager Check", "description": "Periodic check for Kwen Net Page Manager across facebook_pages", "trigger_type": "cron", "cron_expression": "0 */4 * * *", "is_active": true, "run_count": 12, "last_run_at": "2026-03-11T00:00:00.000Z", "next_run_at": "2026-03-11T04:00:00.000Z"},
-    {"slug": "daily-news-digest", "name": "Daily News Digest", "description": "Runs the news digest every 6 hours covering AI, Crypto, Crypto Airdrops, Israel-Iran War, Philippines Gas Prices, and GMA News", "trigger_type": "cron", "cron_expression": "0 */6 * * *", "is_active": true, "run_count": 11, "last_run_at": "2026-03-10T20:00:00.000Z", "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "x-twitter-engagement-agent-check", "name": "X Twitter Engagement Agent Check", "description": "Periodic check for X Twitter Engagement Agent across twitter", "trigger_type": "cron", "cron_expression": "0 */6 * * *", "is_active": true, "run_count": 0, "last_run_at": null, "next_run_at": "2026-03-11T08:00:00.000Z"},
-    {"slug": "weekly-review", "name": "Weekly Review", "description": "Weekly self-improvement review — analyzes what's working, what's not, and proposes changes", "trigger_type": "cron", "cron_expression": "0 18 * * 0", "is_active": true, "run_count": 1, "last_run_at": "2026-03-09T18:00:00.000Z", "next_run_at": "2026-03-15T10:00:00.000Z"},
-    {"slug": "pr-monitor-check", "name": "PR Monitor Check", "description": "Track open PRs and flag stale reviews to keep your code review queue clean", "trigger_type": "cron", "cron_expression": "0 9,14 * * 1-5", "is_active": true, "run_count": 4, "last_run_at": "2026-03-10T22:00:00.000Z", "next_run_at": "2026-03-11T17:00:00.000Z"}
+    {
+      "slug": "ai-debate-arena-every-5-minutes",
+      "name": "AI Debate Arena - Every 5 Minutes",
+      "description": "Runs the OpenAI vs Anthropic debate every 5 minutes, delivering a fresh round to #ai-debate-arena",
+      "trigger_type": "cron",
+      "cron_expression": "0 * * * *",
+      "is_active": true,
+      "run_count": 15,
+      "last_run_at": "2026-03-10T18:06:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "x-weekly-growth-analytics",
+      "name": "X Weekly Growth Analytics",
+      "description": "Every Sunday at 6 PM SGT: Pulls last 100 tweets and 50 mentions, analyzes engagement patterns by topic/format/timing, calculates follower velocity signals, generates comprehensive growth report with next-week recommendations, sends via Telegram.",
+      "trigger_type": "cron",
+      "cron_expression": "0 18 * * 0",
+      "is_active": true,
+      "run_count": 0,
+      "last_run_at": null,
+      "next_run_at": "2026-03-15T10:00:00Z"
+    },
+    {
+      "slug": "x-engagement-loop",
+      "name": "X Engagement Loop",
+      "description": "Runs 3x daily (10 AM, 3 PM, 9 PM SGT): Checks mentions and replies to legitimate ones only (max 3, skip all spam). Retweets 3-5 quality posts from timeline. ZERO original content — engagement only.",
+      "trigger_type": "cron",
+      "cron_expression": "0 10,15,21 * * *",
+      "is_active": true,
+      "run_count": 3,
+      "last_run_at": "2026-03-10T13:00:00Z",
+      "next_run_at": "2026-03-11T02:00:00Z"
+    },
+    {
+      "slug": "x-trend-jacker",
+      "name": "X Trend-Jacker",
+      "description": "Runs every 4 hours: Scans for genuinely breaking news across AI, crypto, Trump/politics, markets, geopolitics. ONLY posts if a high-impact story is found (less than 2 hours old). Most runs produce zero posts — silence is better than noise. Max 1 tweet + 1 self-reply per run.",
+      "trigger_type": "cron",
+      "cron_expression": "0 */4 * * *",
+      "is_active": true,
+      "run_count": 6,
+      "last_run_at": "2026-03-10T16:00:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "x-strategic-reply-guy-engine",
+      "name": "X Strategic Reply-Guy Engine",
+      "description": "Runs 2x daily (11 AM, 6 PM SGT): Searches for high-engagement tweets, crafts max 2 expert commentary tweets per run with self-replies. Quality over quantity — posts nothing if no sharp take exists.",
+      "trigger_type": "cron",
+      "cron_expression": "0 11,18 * * *",
+      "is_active": true,
+      "run_count": 3,
+      "last_run_at": "2026-03-10T10:00:00Z",
+      "next_run_at": "2026-03-11T03:00:00Z"
+    },
+    {
+      "slug": "x-original-content-morning",
+      "name": "X Original Content — Morning",
+      "description": "Morning original content run (8 AM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets with proven hook frameworks. Adds self-reply engagement hooks. Threads on Tue/Fri.",
+      "trigger_type": "cron",
+      "cron_expression": "0 8 * * *",
+      "is_active": true,
+      "run_count": 1,
+      "last_run_at": "2026-03-10T00:00:00Z",
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "x-original-content-evening",
+      "name": "X Original Content — Evening",
+      "description": "Evening original content run (7 PM SGT): Researches trending topics, posts max 1 original tweet with 1 self-reply. Only posts if the take is genuinely expert-level. Skips entirely if morning run already covered the day's top stories.",
+      "trigger_type": "cron",
+      "cron_expression": "0 19 * * *",
+      "is_active": true,
+      "run_count": 1,
+      "last_run_at": "2026-03-10T11:00:00Z",
+      "next_run_at": "2026-03-11T11:00:00Z"
+    },
+    {
+      "slug": "twitter-thread-curation-evening",
+      "name": "Twitter Thread Curation — Evening",
+      "description": "Evening run (10 PM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business. Evaluates with 5-dimension weighted scoring (7.0+ threshold), crafts premium quote-tweet copy, posts to @Daquipil0817, adds self-reply engagement hooks to each post, and sends Telegram digest.",
+      "trigger_type": "cron",
+      "cron_expression": "0 22 * * *",
+      "is_active": true,
+      "run_count": 1,
+      "last_run_at": "2026-03-10T14:00:00Z",
+      "next_run_at": "2026-03-11T14:00:00Z"
+    },
+    {
+      "slug": "daily-twitter-thread-curation",
+      "name": "Twitter Thread Curation — Morning",
+      "description": "Morning run (10 AM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business. Evaluates with 5-dimension weighted scoring (7.0+ threshold), crafts premium quote-tweet copy, posts to @Daquipil0817, adds self-reply engagement hooks to each post, and sends Telegram digest.",
+      "trigger_type": "cron",
+      "cron_expression": "0 10 * * *",
+      "is_active": true,
+      "run_count": 1,
+      "last_run_at": "2026-03-10T02:00:00Z",
+      "next_run_at": "2026-03-11T02:00:00Z"
+    },
+    {
+      "slug": "earnautobot-500-income-operator-check",
+      "name": "EarnAutoBot-500 Income Operator Check",
+      "description": "Periodic check for EarnAutoBot-500 Income Operator across google_drive, facebook_pages, youtube_data_api, github, gumroad, canva, notion",
+      "trigger_type": "cron",
+      "cron_expression": "0 */6 * * *",
+      "is_active": true,
+      "run_count": 4,
+      "last_run_at": "2026-03-10T18:02:00Z",
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "dashboard-sync",
+      "name": "Dashboard Sync",
+      "description": "Every hour, collects live agent, trigger, and task execution data from Nebula and pushes sync-data.json to the ai-swarm-dashboard GitHub repo for the live dashboard.",
+      "trigger_type": "cron",
+      "cron_expression": "0 * * * *",
+      "is_active": true,
+      "run_count": 45,
+      "last_run_at": "2026-03-10T18:04:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "youtube-short-2200-utc",
+      "name": "YouTube Short 22:00 UTC",
+      "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 10PM UTC daily using Master System v2.1",
+      "trigger_type": "cron",
+      "cron_expression": "0 22 * * *",
+      "is_active": true,
+      "run_count": 2,
+      "last_run_at": "2026-03-09T22:00:00Z",
+      "next_run_at": "2026-03-10T22:00:00Z"
+    },
+    {
+      "slug": "youtube-short-1900-utc",
+      "name": "YouTube Short 19:00 UTC",
+      "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 7PM UTC daily using Master System v2.1",
+      "trigger_type": "cron",
+      "cron_expression": "0 19 * * *",
+      "is_active": true,
+      "run_count": 2,
+      "last_run_at": "2026-03-09T19:00:00Z",
+      "next_run_at": "2026-03-11T19:00:00Z"
+    },
+    {
+      "slug": "youtube-short-1700-utc",
+      "name": "YouTube Short 17:00 UTC",
+      "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 5PM UTC daily using Master System v2.1",
+      "trigger_type": "cron",
+      "cron_expression": "0 17 * * *",
+      "is_active": true,
+      "run_count": 3,
+      "last_run_at": "2026-03-10T17:00:00Z",
+      "next_run_at": "2026-03-11T17:00:00Z"
+    },
+    {
+      "slug": "youtube-short-1300-utc",
+      "name": "YouTube Short 13:00 UTC",
+      "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 1PM UTC daily using Master System v2.1",
+      "trigger_type": "cron",
+      "cron_expression": "0 13 * * *",
+      "is_active": true,
+      "run_count": 3,
+      "last_run_at": "2026-03-10T13:00:00Z",
+      "next_run_at": "2026-03-11T13:00:00Z"
+    },
+    {
+      "slug": "youtube-short-1000-utc",
+      "name": "YouTube Short 10:00 UTC",
+      "description": "Produces and uploads 1 hyper-cinematic YouTube Short at 10AM UTC daily using Master System v2.1",
+      "trigger_type": "cron",
+      "cron_expression": "0 10 * * *",
+      "is_active": true,
+      "run_count": 2,
+      "last_run_at": "2026-03-10T10:00:00Z",
+      "next_run_at": "2026-03-11T10:00:00Z"
+    },
+    {
+      "slug": "youtube-shorts-creator-check",
+      "name": "YouTube Shorts Creator Check",
+      "description": "Periodic check for YouTube Shorts Creator across youtube_data_api",
+      "trigger_type": "cron",
+      "cron_expression": "0 */6 * * *",
+      "is_active": true,
+      "run_count": 10,
+      "last_run_at": "2026-03-10T18:03:00Z",
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "spotify-music-manager-check",
+      "name": "Spotify Music Manager Check",
+      "description": "Periodic check for Spotify Music Manager across spotify",
+      "trigger_type": "cron",
+      "cron_expression": "0 */1 * * *",
+      "is_active": false,
+      "run_count": 20,
+      "last_run_at": "2026-03-10T18:00:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "hourly-airdrop-digest",
+      "name": "Daily Airdrop Digest",
+      "description": "Twice daily, searches the web for the top 10 latest potential crypto airdrops and sends a formatted digest to Telegram.",
+      "trigger_type": "cron",
+      "cron_expression": "0 8,20 * * *",
+      "is_active": true,
+      "run_count": 7,
+      "last_run_at": "2026-03-10T08:00:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "github-repo-manager-check",
+      "name": "GitHub Repo Manager Check",
+      "description": "Periodic check for GitHub Repo Manager across github",
+      "trigger_type": "cron",
+      "cron_expression": "0 */4 * * *",
+      "is_active": true,
+      "run_count": 3,
+      "last_run_at": "2026-03-10T12:00:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "crypto-news-to-kwen-net",
+      "name": "Crypto News to Kwen Net",
+      "description": "Every 6 hours, searches X for the latest crypto news and posts a digest to the Kwen Net Facebook Page.",
+      "trigger_type": "cron",
+      "cron_expression": "0 */6 * * *",
+      "is_active": true,
+      "run_count": 12,
+      "last_run_at": "2026-03-10T18:03:00Z",
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "kwen-net-page-manager-check",
+      "name": "Kwen Net Page Manager Check",
+      "description": "Periodic check for Kwen Net Page Manager across facebook_pages",
+      "trigger_type": "cron",
+      "cron_expression": "0 */4 * * *",
+      "is_active": true,
+      "run_count": 12,
+      "last_run_at": "2026-03-10T16:00:00Z",
+      "next_run_at": "2026-03-10T20:00:00Z"
+    },
+    {
+      "slug": "daily-news-digest",
+      "name": "Daily News Digest",
+      "description": "Runs the news digest every 6 hours covering AI, Crypto, Crypto Airdrops, Israel-Iran War, Philippines Gas Prices, and GMA News",
+      "trigger_type": "cron",
+      "cron_expression": "0 */6 * * *",
+      "is_active": true,
+      "run_count": 12,
+      "last_run_at": "2026-03-10T18:07:00Z",
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "x-twitter-engagement-agent-check",
+      "name": "X Twitter Engagement Agent Check",
+      "description": "Periodic check for X Twitter Engagement Agent across twitter",
+      "trigger_type": "cron",
+      "cron_expression": "0 */6 * * *",
+      "is_active": true,
+      "run_count": 0,
+      "last_run_at": null,
+      "next_run_at": "2026-03-11T00:00:00Z"
+    },
+    {
+      "slug": "weekly-review",
+      "name": "Weekly Review",
+      "description": "Weekly self-improvement review — analyzes what's working, what's not, and proposes changes",
+      "trigger_type": "cron",
+      "cron_expression": "0 18 * * 0",
+      "is_active": true,
+      "run_count": 1,
+      "last_run_at": "2026-03-08T10:00:00Z",
+      "next_run_at": "2026-03-15T10:00:00Z"
+    },
+    {
+      "slug": "pr-monitor-check",
+      "name": "PR Monitor Check",
+      "description": "Track open PRs and flag stale reviews to keep your code review queue clean",
+      "trigger_type": "cron",
+      "cron_expression": "0 9,14 * * 1-5",
+      "is_active": true,
+      "run_count": 4,
+      "last_run_at": "2026-03-10T14:00:00Z",
+      "next_run_at": "2026-03-11T01:00:00Z"
+    }
   ],
   "recent_tasks": [
-    {"title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #45", "status": "in_progress", "created_at": "2026-03-11T02:02:22.000Z", "updated_at": "2026-03-11T02:02:22.000Z", "description_preview": "Automated task from trigger 'Dashboard Sync'"},
-    {"title": "EarnAutoBot-500 Income Operator Check - Execution #4", "status": "in_progress", "created_at": "2026-03-11T02:01:17.000Z", "updated_at": "2026-03-11T02:02:15.000Z", "description_preview": "Automated task from trigger 'EarnAutoBot-500 Income Operator Check'"},
-    {"title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #15", "status": "in_progress", "created_at": "2026-03-11T02:00:27.000Z", "updated_at": "2026-03-11T02:02:04.000Z", "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"},
-    {"title": "Daily News Digest - Execution #12", "status": "in_progress", "created_at": "2026-03-11T02:00:20.000Z", "updated_at": "2026-03-11T02:01:51.000Z", "description_preview": "Automated task from trigger 'Daily News Digest'"},
-    {"title": "Crypto News from X to Kwen Net Facebook - Execution #12", "status": "in_progress", "created_at": "2026-03-11T02:01:05.000Z", "updated_at": "2026-03-11T02:01:32.000Z", "description_preview": "Automated task from trigger 'Crypto News to Kwen Net'"},
-    {"title": "Spotify Music Manager Check - Execution #20", "status": "in_progress", "created_at": "2026-03-11T02:00:21.000Z", "updated_at": "2026-03-11T02:00:21.000Z", "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"},
-    {"title": "Spotify Music Manager Check - Execution #19", "status": "failed", "created_at": "2026-03-11T01:04:31.000Z", "updated_at": "2026-03-11T01:35:00.000Z", "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"},
-    {"title": "Daily YouTube Short Production v2.1 — Master Cinematic Pipeline - Execution #3", "status": "completed", "created_at": "2026-03-11T01:02:00.000Z", "updated_at": "2026-03-11T01:10:00.000Z", "description_preview": "Automated task from trigger 'YouTube Short 17:00 UTC'"},
-    {"title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #14", "status": "completed", "created_at": "2026-03-11T01:00:27.000Z", "updated_at": "2026-03-11T01:07:00.000Z", "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"},
-    {"title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #44", "status": "completed", "created_at": "2026-03-11T01:01:28.000Z", "updated_at": "2026-03-11T01:04:00.000Z", "description_preview": "Automated task from trigger 'Dashboard Sync'"},
-    {"title": "Spotify Music Manager Check - Execution #18", "status": "failed", "created_at": "2026-03-11T00:07:36.000Z", "updated_at": "2026-03-11T01:00:00.000Z", "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"},
-    {"title": "Kwen Net Page Manager Check - Execution #12", "status": "failed", "created_at": "2026-03-11T00:00:04.000Z", "updated_at": "2026-03-10T23:55:00.000Z", "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"},
-    {"title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #13", "status": "completed", "created_at": "2026-03-10T23:53:29.000Z", "updated_at": "2026-03-10T23:58:00.000Z", "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"},
-    {"title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #43", "status": "completed", "created_at": "2026-03-10T23:55:51.000Z", "updated_at": "2026-03-10T23:58:00.000Z", "description_preview": "Automated task from trigger 'Dashboard Sync'"},
-    {"title": "X Trend-Jacker Engine - Execution #6", "status": "completed", "created_at": "2026-03-10T23:54:37.000Z", "updated_at": "2026-03-10T23:58:00.000Z", "description_preview": "Automated task from trigger 'X Trend-Jacker'"},
-    {"title": "Spotify Music Manager Check - Execution #17", "status": "failed", "created_at": "2026-03-10T23:08:10.000Z", "updated_at": "2026-03-10T23:55:00.000Z", "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"},
-    {"title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #42", "status": "completed", "created_at": "2026-03-10T22:43:49.000Z", "updated_at": "2026-03-10T22:48:00.000Z", "description_preview": "Automated task from trigger 'Dashboard Sync'"},
-    {"title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #12", "status": "completed", "created_at": "2026-03-10T22:47:07.000Z", "updated_at": "2026-03-10T22:52:00.000Z", "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"},
-    {"title": "PR Review Check - Execution #4", "status": "failed", "created_at": "2026-03-10T21:47:05.000Z", "updated_at": "2026-03-10T22:45:00.000Z", "description_preview": "Automated task from trigger 'PR Monitor Check'"},
-    {"title": "Spotify Music Manager Check - Execution #16", "status": "failed", "created_at": "2026-03-10T21:40:22.000Z", "updated_at": "2026-03-10T21:45:00.000Z", "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"}
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #16",
+      "status": "in_progress",
+      "created_at": "2026-03-10T19:00:28Z",
+      "updated_at": "2026-03-10T19:01:27Z",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #46",
+      "status": "in_progress",
+      "created_at": "2026-03-10T19:01:28Z",
+      "updated_at": "2026-03-10T19:01:28Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Daily YouTube Short Production v2.1 \u2014 Master Cinematic Pipeline - Execution #3",
+      "status": "in_progress",
+      "created_at": "2026-03-10T19:00:08Z",
+      "updated_at": "2026-03-10T19:00:53Z",
+      "description_preview": "Automated task from trigger 'YouTube Short 19:00 UTC'"
+    },
+    {
+      "title": "Spotify Music Manager Check - Execution #20",
+      "status": "failed",
+      "created_at": "2026-03-10T18:00:21Z",
+      "updated_at": "2026-03-10T18:31:27Z",
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
+    },
+    {
+      "title": "Daily News Digest - Execution #12",
+      "status": "completed",
+      "created_at": "2026-03-10T18:00:20Z",
+      "updated_at": "2026-03-10T18:07:27Z",
+      "description_preview": "Automated task from trigger 'Daily News Digest'"
+    },
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #15",
+      "status": "completed",
+      "created_at": "2026-03-10T18:00:28Z",
+      "updated_at": "2026-03-10T18:06:27Z",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
+    },
+    {
+      "title": "YouTube Shorts Creator Check - Execution #10",
+      "status": "completed",
+      "created_at": "2026-03-10T18:04:19Z",
+      "updated_at": "2026-03-10T18:06:27Z",
+      "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #45",
+      "status": "completed",
+      "created_at": "2026-03-10T18:02:22Z",
+      "updated_at": "2026-03-10T18:04:27Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Crypto News from X to Kwen Net Facebook - Execution #12",
+      "status": "completed",
+      "created_at": "2026-03-10T18:01:06Z",
+      "updated_at": "2026-03-10T18:04:27Z",
+      "description_preview": "Automated task from trigger 'Crypto News to Kwen Net'"
+    },
+    {
+      "title": "EarnAutoBot-500 Income Operator Check - Execution #4",
+      "status": "completed",
+      "created_at": "2026-03-10T18:01:18Z",
+      "updated_at": "2026-03-10T18:03:27Z",
+      "description_preview": "Automated task from trigger 'EarnAutoBot-500 Income Operator Check'"
+    },
+    {
+      "title": "Spotify Music Manager Check - Execution #19",
+      "status": "failed",
+      "created_at": "2026-03-10T17:04:32Z",
+      "updated_at": "2026-03-10T18:01:27Z",
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
+    },
+    {
+      "title": "Daily YouTube Short Production v2.1 \u2014 Master Cinematic Pipeline - Execution #3",
+      "status": "completed",
+      "created_at": "2026-03-10T17:02:01Z",
+      "updated_at": "2026-03-10T17:02:27Z",
+      "description_preview": "Automated task from trigger 'YouTube Short 17:00 UTC'"
+    },
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #14",
+      "status": "completed",
+      "created_at": "2026-03-10T17:00:27Z",
+      "updated_at": "2026-03-10T17:06:27Z",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #44",
+      "status": "completed",
+      "created_at": "2026-03-10T17:01:28Z",
+      "updated_at": "2026-03-10T17:02:27Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "Spotify Music Manager Check - Execution #18",
+      "status": "failed",
+      "created_at": "2026-03-10T16:07:36Z",
+      "updated_at": "2026-03-10T17:01:27Z",
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
+    },
+    {
+      "title": "Kwen Net Page Manager Check - Execution #12",
+      "status": "failed",
+      "created_at": "2026-03-10T16:00:05Z",
+      "updated_at": "2026-03-10T16:00:27Z",
+      "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
+    },
+    {
+      "title": "AI Debate Arena - OpenAI vs Anthropic (5-min rounds) - Execution #13",
+      "status": "completed",
+      "created_at": "2026-03-10T16:00:29Z",
+      "updated_at": "2026-03-10T16:06:27Z",
+      "description_preview": "Automated task from trigger 'AI Debate Arena - Every 5 Minutes'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #43",
+      "status": "completed",
+      "created_at": "2026-03-10T16:02:32Z",
+      "updated_at": "2026-03-10T16:02:27Z",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
+      "title": "X Trend-Jacker Engine - Execution #6",
+      "status": "completed",
+      "created_at": "2026-03-10T16:01:18Z",
+      "updated_at": "2026-03-10T16:00:27Z",
+      "description_preview": "Automated task from trigger 'X Trend-Jacker'"
+    },
+    {
+      "title": "Spotify Music Manager Check - Execution #17",
+      "status": "failed",
+      "created_at": "2026-03-10T15:08:10Z",
+      "updated_at": "2026-03-10T16:01:27Z",
+      "description_preview": "Automated task from trigger 'Spotify Music Manager Check'"
+    }
   ]
 }
