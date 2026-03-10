@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-03-09T23:00:28Z",
+  "synced_at": "2026-03-10T00:01:09Z",
   "agents": [
     {
       "slug": "youtube-shorts-creator",
@@ -18,56 +18,56 @@
     {
       "slug": "claude-opus-46",
       "name": "Claude Opus 4.6",
-      "description": "An elite heavyweight AI reasoning and research engine built for the most complex, intellectually demanding questions across all domains — including advanced mathematics, scientific analysis, philosophical inquiry, code architecture, legal reasoning, and multi-source research synthesis.",
+      "description": "An elite heavyweight AI reasoning and research engine built for the most complex, intellectually demanding questions across all domains.",
       "tools": ["Web Search", "Code", "Media", "Web Scraping"],
       "is_disabled": false
     },
     {
       "slug": "earnautobot-500-income-operator",
       "name": "EarnAutoBot-500 Income Operator",
-      "description": "An elite AI income automation operator for Joshua in Quezon City, Philippines — built to build and scale legal, ethical online income systems targeting $500+/week net profit across digital products, faceless content, local AI automation services, and print-on-demand.",
+      "description": "An elite AI income automation operator for Joshua — built to build and scale legal, ethical online income systems targeting $500+/week net profit across digital products, faceless content, local AI automation services, and print-on-demand.",
       "tools": ["Web Search", "Code", "Web Scraping", "google_drive", "facebook_pages", "youtube_data_api", "github", "gumroad", "canva", "notion"],
       "is_disabled": false
     },
     {
       "slug": "content-strategist-agent",
       "name": "Content Strategist Agent",
-      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page. Receives research from the Research & Intelligence Agent, generates weekly content calendars, adapts topics into platform-specific briefs with consistent brand voice.",
+      "description": "Coordinates cross-platform content strategy for Joshua's YouTube Shorts, Twitter/X, and Kwen Net Facebook Page.",
       "tools": ["Web Search", "Code", "Memory", "Agents", "twitter", "youtube_data_api", "facebook_pages"],
       "is_disabled": false
     },
     {
       "slug": "research-intelligence-agent",
       "name": "Research & Intelligence Agent",
-      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs. Covers trending topic discovery, competitive analysis, fact-checking, market research, crypto/airdrop vetting, and news monitoring.",
+      "description": "A deep research specialist that performs thorough multi-source web research and produces structured, actionable intelligence briefs.",
       "tools": ["Web Search", "Web Scraping", "Web", "Code", "Memory"],
       "is_disabled": false
     },
     {
       "slug": "telegram-notifier",
       "name": "Telegram Notifier",
-      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries via the native Telegram integration.",
+      "description": "Real-time Telegram notification hub for Joshua (@joshua761) — sends formatted alerts, task completions, error reports, progress updates, and daily/weekly summaries.",
       "tools": ["Communication", "Core"],
       "is_disabled": false
     },
     {
       "slug": "spotify-music-manager",
       "name": "Spotify Music Manager",
-      "description": "Manages your Spotify account end-to-end for joshua.daquipil0817@gmail.com — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
+      "description": "Manages your Spotify account end-to-end — searches tracks, artists, albums, and playlists; creates and edits playlists; controls playback; checks recently played; fetches personalized recommendations.",
       "tools": ["spotify"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-file-manager",
       "name": "Google Drive File Manager",
-      "description": "Manages files and folders on Google Drive for joshua.daquipil0817@gmail.com — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
+      "description": "Manages files and folders on Google Drive — handles uploading, downloading, searching, organizing folders, and sharing files via OAuth.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
     {
       "slug": "google-drive-manager",
       "name": "Google Drive Manager",
-      "description": "Manages Google Drive for joshua.daquipil0817@gmail.com via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
+      "description": "Manages Google Drive via OAuth — handles file and folder operations including uploading, downloading, searching, sharing, organizing, and permissions management.",
       "tools": ["google_drive"],
       "is_disabled": false
     },
@@ -81,14 +81,14 @@
     {
       "slug": "kwen-net-page-manager",
       "name": "Kwen Net Page Manager",
-      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity every 4 hours for new engagement.",
+      "description": "Manages the Kwen Net Facebook Page end-to-end: creates and schedules posts, reads and replies to comments, handles inbox messages, checks page insights, and monitors page activity.",
       "tools": ["facebook_pages"],
       "is_disabled": false
     },
     {
       "slug": "pr-monitor",
       "name": "PR Monitor",
-      "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI. Delivers smart summaries to reduce notification noise and keep you focused on what matters.",
+      "description": "Scans GitHub for PRs needing your review, stale PRs (open >2 days), merge conflicts, and failing CI. Delivers smart summaries to reduce notification noise.",
       "tools": ["Web", "github"],
       "is_disabled": false
     },
@@ -150,24 +150,24 @@
     {
       "slug": "x-engagement-loop",
       "name": "X Engagement Loop",
-      "description": "Runs 3x daily (9 AM, 2 PM, 8 PM SGT): Checks and replies to all mentions (75x algorithm weight), engages with home timeline — likes 10-15 posts, retweets 3-5 exceptional ones, quote-tweets 1-2 with sharp commentary.",
+      "description": "Runs 3x daily (9 AM, 2 PM, 8 PM SGT): Checks and replies to all mentions, engages with home timeline — likes 10-15 posts, retweets 3-5 exceptional ones, quote-tweets 1-2 with sharp commentary.",
       "trigger_type": "cron",
       "cron_expression": "0 9,14,20 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "2 hours from now"
+      "next_run_at": "59 minutes from now"
     },
     {
       "slug": "x-trend-jacker",
       "name": "X Trend-Jacker",
-      "description": "Runs every 3 hours: Scans for breaking news across AI, crypto, Trump/politics, markets, geopolitics. Searches X for trending conversations. If high-signal story found, posts hot-take tweet with first-mover advantage.",
+      "description": "Runs every 3 hours: Scans for breaking news across AI, crypto, Trump/politics, markets, geopolitics. Searches X for trending conversations. Posts hot-take tweets with first-mover advantage.",
       "trigger_type": "cron",
       "cron_expression": "0 */3 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "58 minutes ago",
-      "next_run_at": "2 hours from now"
+      "last_run_at": "2 hours ago",
+      "next_run_at": "59 minutes from now"
     },
     {
       "slug": "x-strategic-reply-guy-engine",
@@ -176,42 +176,42 @@
       "trigger_type": "cron",
       "cron_expression": "0 7,12,17,22 * * *",
       "is_active": true,
-      "run_count": 0,
-      "last_run_at": "Never",
-      "next_run_at": "5 hours from now"
+      "run_count": 1,
+      "last_run_at": "55 minutes ago",
+      "next_run_at": "4 hours from now"
     },
     {
       "slug": "x-original-content-morning",
-      "name": "X Original Content \u2014 Morning",
+      "name": "X Original Content — Morning",
       "description": "Morning original content run (8 AM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets with proven hook frameworks.",
       "trigger_type": "cron",
       "cron_expression": "0 8 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "59 minutes from now"
+      "next_run_at": "a day from now"
     },
     {
       "slug": "x-original-content-evening",
-      "name": "X Original Content \u2014 Evening",
+      "name": "X Original Content — Evening",
       "description": "Evening original content run (7 PM SGT): Researches trending topics across AI, crypto, politics, markets. Generates and posts 2-3 original tweets with proven hook frameworks.",
       "trigger_type": "cron",
       "cron_expression": "0 19 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "12 hours from now"
+      "next_run_at": "11 hours from now"
     },
     {
       "slug": "twitter-thread-curation-evening",
-      "name": "Twitter Thread Curation \u2014 Evening",
+      "name": "Twitter Thread Curation — Evening",
       "description": "Evening run (10 PM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.",
       "trigger_type": "cron",
       "cron_expression": "0 22 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "15 hours from now"
+      "next_run_at": "14 hours from now"
     },
     {
       "slug": "earnautobot-500-income-operator-check-2",
@@ -222,18 +222,18 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "59 minutes from now"
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "daily-twitter-thread-curation",
-      "name": "Twitter Thread Curation \u2014 Morning",
+      "name": "Twitter Thread Curation — Morning",
       "description": "Morning run (10 AM SGT): Searches X/Twitter for top 3 highest-signal threads from last 12 hours across AI, crypto, politics, markets, geopolitics, business.",
       "trigger_type": "cron",
       "cron_expression": "0 10 * * *",
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "3 hours from now"
+      "next_run_at": "2 hours from now"
     },
     {
       "slug": "earnautobot-500-income-operator-check",
@@ -243,8 +243,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "5 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "6 hours ago",
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "dashboard-sync",
@@ -253,8 +253,8 @@
       "trigger_type": "cron",
       "cron_expression": "0 * * * *",
       "is_active": true,
-      "run_count": 25,
-      "last_run_at": "57 minutes ago",
+      "run_count": 26,
+      "last_run_at": "58 minutes ago",
       "next_run_at": "59 minutes from now"
     },
     {
@@ -265,8 +265,8 @@
       "cron_expression": "0 22 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "24 minutes ago",
-      "next_run_at": "23 hours from now"
+      "last_run_at": "an hour ago",
+      "next_run_at": "22 hours from now"
     },
     {
       "slug": "youtube-short-1900-utc",
@@ -276,8 +276,8 @@
       "cron_expression": "0 19 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "4 hours ago",
-      "next_run_at": "20 hours from now"
+      "last_run_at": "5 hours ago",
+      "next_run_at": "19 hours from now"
     },
     {
       "slug": "youtube-short-1700-utc",
@@ -287,8 +287,8 @@
       "cron_expression": "0 17 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "6 hours ago",
-      "next_run_at": "18 hours from now"
+      "last_run_at": "7 hours ago",
+      "next_run_at": "17 hours from now"
     },
     {
       "slug": "youtube-short-1300-utc",
@@ -298,8 +298,8 @@
       "cron_expression": "0 13 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "10 hours ago",
-      "next_run_at": "14 hours from now"
+      "last_run_at": "11 hours ago",
+      "next_run_at": "13 hours from now"
     },
     {
       "slug": "youtube-short-1000-utc",
@@ -309,8 +309,8 @@
       "cron_expression": "0 10 * * *",
       "is_active": true,
       "run_count": 1,
-      "last_run_at": "12 hours ago",
-      "next_run_at": "11 hours from now"
+      "last_run_at": "13 hours ago",
+      "next_run_at": "10 hours from now"
     },
     {
       "slug": "youtube-shorts-creator-check",
@@ -320,8 +320,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 6,
-      "last_run_at": "5 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "6 hours ago",
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "spotify-music-manager-check",
@@ -342,8 +342,8 @@
       "cron_expression": "0 8,20 * * *",
       "is_active": true,
       "run_count": 6,
-      "last_run_at": "3 hours ago",
-      "next_run_at": "9 hours from now"
+      "last_run_at": "4 hours ago",
+      "next_run_at": "8 hours from now"
     },
     {
       "slug": "github-repo-manager-check",
@@ -353,8 +353,8 @@
       "cron_expression": "0 */4 * * *",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "3 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "4 hours ago",
+      "next_run_at": "4 hours from now"
     },
     {
       "slug": "crypto-news-to-kwen-net",
@@ -364,8 +364,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 8,
-      "last_run_at": "5 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "6 hours ago",
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "kwen-net-page-manager-check",
@@ -375,8 +375,8 @@
       "cron_expression": "0 */4 * * *",
       "is_active": true,
       "run_count": 10,
-      "last_run_at": "3 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "4 hours ago",
+      "next_run_at": "4 hours from now"
     },
     {
       "slug": "daily-news-digest",
@@ -386,8 +386,8 @@
       "cron_expression": "0 */6 * * *",
       "is_active": true,
       "run_count": 8,
-      "last_run_at": "5 hours ago",
-      "next_run_at": "59 minutes from now"
+      "last_run_at": "6 hours ago",
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "x-twitter-engagement-agent-check",
@@ -398,7 +398,7 @@
       "is_active": true,
       "run_count": 0,
       "last_run_at": "Never",
-      "next_run_at": "59 minutes from now"
+      "next_run_at": "6 hours from now"
     },
     {
       "slug": "weekly-review",
@@ -419,150 +419,150 @@
       "cron_expression": "0 9,14 * * 1-5",
       "is_active": true,
       "run_count": 2,
-      "last_run_at": "9 hours ago",
-      "next_run_at": "10 hours from now"
+      "last_run_at": "10 hours ago",
+      "next_run_at": "9 hours from now"
     }
   ],
   "recent_tasks": [
     {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #26",
+      "title": "X Original Content Engine - Execution #1",
+      "status": "in_progress",
+      "created_at": "44 seconds ago",
+      "updated_at": "4 seconds ago",
+      "description_preview": "Automated task from trigger 'X Original Content — Morning'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #27",
       "status": "in_progress",
       "created_at": "5 seconds ago",
       "updated_at": "5 seconds ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
-      "title": "X Strategic Reply-Guy Engine - Execution #1",
+      "title": " - Execution #7",
       "status": "in_progress",
-      "created_at": "26 seconds ago",
-      "updated_at": "26 seconds ago",
+      "created_at": "40 seconds ago",
+      "updated_at": "40 seconds ago",
+      "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
+    },
+    {
+      "title": "X Strategic Reply-Guy Engine - Execution #1",
+      "status": "completed",
+      "created_at": "an hour ago",
+      "updated_at": "55 minutes ago",
       "description_preview": "Automated task from trigger 'X Strategic Reply-Guy Engine'"
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #26",
+      "status": "completed",
+      "created_at": "an hour ago",
+      "updated_at": "58 minutes ago",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
       "title": "Daily YouTube Short Production v2.1 — Master Cinematic Pipeline - Execution #2",
       "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "24 minutes ago",
+      "created_at": "2 hours ago",
+      "updated_at": "an hour ago",
       "description_preview": "Automated task from trigger 'YouTube Short 22:00 UTC'"
     },
     {
       "title": "Produce and Publish Educational Nature Shorts",
       "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "24 minutes ago",
-      "description_preview": "Create and publish two educational YouTube Shorts covering food science phenomena and an intriguing ..."
+      "created_at": "2 hours ago",
+      "updated_at": "an hour ago",
+      "description_preview": "Create and publish two educational YouTube Shorts covering food science phenomena and an intriguing nature topic."
     },
     {
       "title": "Optimize Repository Data Synchronization Configuration",
       "status": "completed",
-      "created_at": "29 minutes ago",
-      "updated_at": "28 minutes ago",
-      "description_preview": "Update the repository sync configuration by adjusting the file output path and increasing the trigge..."
+      "created_at": "an hour ago",
+      "updated_at": "an hour ago",
+      "description_preview": "Update the repository sync configuration by adjusting the file output path and increasing the trigger frequency."
     },
     {
       "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #25",
-      "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "57 minutes ago",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "X Engagement Loop Engine - Execution #1",
-      "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "58 minutes ago",
-      "description_preview": "Automated task from trigger 'X Trend-Jacker'"
-    },
-    {
-      "title": "Process and Upload Video to YouTube Shorts",
-      "status": "completed",
-      "created_at": "an hour ago",
-      "updated_at": "an hour ago",
-      "description_preview": "Convert the specified video file to a YouTube-compatible format and complete its upload as a Short."
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #24",
       "status": "completed",
       "created_at": "2 hours ago",
       "updated_at": "2 hours ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
+      "title": "X Engagement Loop Engine - Execution #1",
+      "status": "completed",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "Automated task from trigger 'X Trend-Jacker'"
+    },
+    {
+      "title": "Process and Upload Video to YouTube Shorts",
+      "status": "completed",
+      "created_at": "2 hours ago",
+      "updated_at": "2 hours ago",
+      "description_preview": "Convert the specified video file to a YouTube-compatible format and complete its upload as a Short."
+    },
+    {
+      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #24",
+      "status": "completed",
+      "created_at": "3 hours ago",
+      "updated_at": "3 hours ago",
+      "description_preview": "Automated task from trigger 'Dashboard Sync'"
+    },
+    {
       "title": " - Execution #10",
       "status": "failed",
-      "created_at": "3 hours ago",
-      "updated_at": "2 hours ago",
+      "created_at": "4 hours ago",
+      "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'Kwen Net Page Manager Check'"
     },
     {
       "title": " - Execution #2",
       "status": "failed",
-      "created_at": "3 hours ago",
-      "updated_at": "2 hours ago",
+      "created_at": "4 hours ago",
+      "updated_at": "3 hours ago",
       "description_preview": "Automated task from trigger 'GitHub Repo Manager Check'"
     },
     {
       "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #23",
       "status": "completed",
-      "created_at": "3 hours ago",
-      "updated_at": "3 hours ago",
+      "created_at": "4 hours ago",
+      "updated_at": "4 hours ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
       "title": "Hourly Airdrop Digest - Execution #6",
       "status": "completed",
-      "created_at": "3 hours ago",
-      "updated_at": "3 hours ago",
+      "created_at": "4 hours ago",
+      "updated_at": "4 hours ago",
       "description_preview": "Automated task from trigger 'Daily Airdrop Digest'"
     },
     {
       "title": "Daily YouTube Short Production v2.1 — Master Cinematic Pipeline - Execution #2",
       "status": "completed",
-      "created_at": "4 hours ago",
-      "updated_at": "4 hours ago",
+      "created_at": "5 hours ago",
+      "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Short 19:00 UTC'"
     },
     {
       "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #22",
       "status": "completed",
-      "created_at": "4 hours ago",
-      "updated_at": "4 hours ago",
+      "created_at": "5 hours ago",
+      "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'Dashboard Sync'"
     },
     {
       "title": " - Execution #1",
       "status": "failed",
-      "created_at": "5 hours ago",
-      "updated_at": "4 hours ago",
+      "created_at": "6 hours ago",
+      "updated_at": "5 hours ago",
       "description_preview": "Automated task from trigger 'EarnAutoBot-500 Income Operator Check'"
     },
     {
       "title": " - Execution #6",
       "status": "failed",
-      "created_at": "5 hours ago",
-      "updated_at": "4 hours ago",
+      "created_at": "6 hours ago",
+      "updated_at": "6 hours ago",
       "description_preview": "Automated task from trigger 'YouTube Shorts Creator Check'"
-    },
-    {
-      "title": "Dashboard Live Sync - Collect and Push Agent Data - Execution #21",
-      "status": "completed",
-      "created_at": "5 hours ago",
-      "updated_at": "5 hours ago",
-      "description_preview": "Automated task from trigger 'Dashboard Sync'"
-    },
-    {
-      "title": "Crypto News from X to Kwen Net Facebook - Execution #8",
-      "status": "failed",
-      "created_at": "5 hours ago",
-      "updated_at": "5 hours ago",
-      "description_preview": "Automated task from trigger 'Crypto News to Kwen Net'"
-    },
-    {
-      "title": "Daily News Digest - Execution #8",
-      "status": "completed",
-      "created_at": "5 hours ago",
-      "updated_at": "5 hours ago",
-      "description_preview": "Automated task from trigger 'Daily News Digest'"
     }
   ]
 }
